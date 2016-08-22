@@ -91,7 +91,7 @@
 <meta property="og:site_name" content="Stone_Rivers's Blog">
 <meta property="og:description" content="ng-if ng-click在开发中引出的问题">
 <meta property="og:image" content="http://yoursite.com/../images/fundDetail.jpg">
-<meta property="og:updated_time" content="2016-08-15T09:16:38.418Z">
+<meta property="og:updated_time" content="2016-08-22T08:07:37.979Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ng-if ng-show问题">
 <meta name="twitter:description" content="ng-if ng-click在开发中引出的问题">
@@ -295,7 +295,7 @@
       
 
       
-        <h3 id="ng-if-和-ng-show"><a href="#ng-if-和-ng-show" class="headerlink" title="ng-if 和 ng-show"></a>ng-if 和 ng-show</h3><p>ng-show:</p>
+        <h2 id="ng-if-和-ng-show"><a href="#ng-if-和-ng-show" class="headerlink" title="ng-if 和 ng-show"></a>ng-if 和 ng-show</h2><p>ng-show:</p>
 <blockquote>
 <p>指令在表达式为 true 时显示指定的 HTML 元素，否则隐藏指定的 HTML 元素。</p>
 </blockquote>
@@ -305,10 +305,10 @@
 <p>ng-if 指令用于在表达式为 false 时移除 HTML 元素。<br>  如果 if 语句执行的结果为 true，会添加移除元素，并显示。<br>  ng-if 指令不同于 ng-hide， ng-hide 隐藏元素，而 ng-if 是从 DOM 中移除元素。</p>
 </blockquote>
 <p>即直接移除dom树上的节点。</p>
-<h4 id="开发中遇到的问题"><a href="#开发中遇到的问题" class="headerlink" title="开发中遇到的问题"></a>开发中遇到的问题</h4><p>需求：点击红色框时展示，再次点击收回，点击灰色区域也是收回；<br><img src="/../images/fundDetail.jpg" alt="资金明细"><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;div class=<span class="string">"fund-dialog"</span> ng-show=<span class="string">"showTypeDialog"</span> ng-click=<span class="string">"showTypeDialog = false"</span>&gt;</div><div class="line">        &lt;ul&gt;</div><div class="line">            &lt;li class=<span class="string">"&#123;&#123;currType&#125;&#125;"</span> ng-repeat=<span class="string">"(key, value) in fundTypeList"</span> ng-click=<span class="string">"confirmFundType(key);"</span>&gt;</div><div class="line">                &lt;span class=<span class="string">"&#123;&#123;key&#125;&#125;"</span>&gt;&#123;&#123;value.text&#125;&#125;&lt;/span&gt;</div><div class="line">            &lt;/li&gt;</div><div class="line">        &lt;/ul&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
+<h3 id="开发中遇到的问题"><a href="#开发中遇到的问题" class="headerlink" title="开发中遇到的问题"></a>开发中遇到的问题</h3><p>需求：点击红色框时展示，再次点击收回，点击灰色区域也是收回；<br><img src="/../images/fundDetail.jpg" alt="资金明细"><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;div class=<span class="string">"fund-dialog"</span> ng-show=<span class="string">"showTypeDialog"</span> ng-click=<span class="string">"showTypeDialog = false"</span>&gt;</div><div class="line">        &lt;ul&gt;</div><div class="line">            &lt;li class=<span class="string">"&#123;&#123;currType&#125;&#125;"</span> ng-repeat=<span class="string">"(key, value) in fundTypeList"</span> ng-click=<span class="string">"confirmFundType(key);"</span>&gt;</div><div class="line">                &lt;span class=<span class="string">"&#123;&#123;key&#125;&#125;"</span>&gt;&#123;&#123;value.text&#125;&#125;&lt;/span&gt;</div><div class="line">            &lt;/li&gt;</div><div class="line">        &lt;/ul&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
 <p>代码中若使用ng-if的话,ng-click无作用,但是若ng-click调用该方法，方法包含<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">showTypeDialog = <span class="literal">false</span></div></pre></td></tr></table></figure></p>
 <p>则有作用.<br>若用ng-show就没有这个问题<br>于是这里爆出一个问题：当ng-click执行的方法为修改状态并删除本身时，为什么无作用，是因为ng-click内直接写了方法的问题还是ng-if得问题。<br>网上也没找到相应的问题.<br>后续解决的话就补上</p>
-<h4 id="反转状态时，若只是修改true-false-则不需使用三目"><a href="#反转状态时，若只是修改true-false-则不需使用三目" class="headerlink" title="反转状态时，若只是修改true / false,则不需使用三目"></a>反转状态时，若只是修改true / false,则不需使用三目</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$scope.showTypeDialog = !$scope.showTypeDialog;</div></pre></td></tr></table></figure>
+<h3 id="反转状态时，若只是修改true-false-则不需使用三目"><a href="#反转状态时，若只是修改true-false-则不需使用三目" class="headerlink" title="反转状态时，若只是修改true / false,则不需使用三目"></a>反转状态时，若只是修改true / false,则不需使用三目</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$scope.showTypeDialog = !$scope.showTypeDialog;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -487,7 +487,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#ng-if-和-ng-show"><span class="nav-number">1.</span> <span class="nav-text">ng-if 和 ng-show</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#开发中遇到的问题"><span class="nav-number">1.1.</span> <span class="nav-text">开发中遇到的问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#反转状态时，若只是修改true-false-则不需使用三目"><span class="nav-number">1.2.</span> <span class="nav-text">反转状态时，若只是修改true / false,则不需使用三目</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#ng-if-和-ng-show"><span class="nav-number">1.</span> <span class="nav-text">ng-if 和 ng-show</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#开发中遇到的问题"><span class="nav-number">1.1.</span> <span class="nav-text">开发中遇到的问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#反转状态时，若只是修改true-false-则不需使用三目"><span class="nav-number">1.2.</span> <span class="nav-text">反转状态时，若只是修改true / false,则不需使用三目</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
