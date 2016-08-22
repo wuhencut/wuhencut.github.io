@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="指令," />
+  <meta name="keywords" content="this," />
 
 
 
@@ -84,18 +84,18 @@
 
 
 
-<meta name="description" content="ng-if ng-click在开发中引出的问题">
+<meta name="description" content="笔记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ng-if ng-show问题">
-<meta property="og:url" content="http://yoursite.com/2016/08/15/ng-if-ng-show问题/index.html">
+<meta property="og:title" content="8/22-8/26自学笔记">
+<meta property="og:url" content="http://yoursite.com/2016/08/22/8-22-8-26自学笔记/index.html">
 <meta property="og:site_name" content="Stone_Rivers's Blog">
-<meta property="og:description" content="ng-if ng-click在开发中引出的问题">
-<meta property="og:image" content="http://yoursite.com/../images/fundDetail.jpg">
-<meta property="og:updated_time" content="2016-08-15T09:16:38.418Z">
+<meta property="og:description" content="笔记">
+<meta property="og:image" content="http://yoursite.com/images/this.jpg">
+<meta property="og:updated_time" content="2016-08-22T07:49:54.434Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ng-if ng-show问题">
-<meta name="twitter:description" content="ng-if ng-click在开发中引出的问题">
-<meta name="twitter:image" content="http://yoursite.com/../images/fundDetail.jpg">
+<meta name="twitter:title" content="8/22-8/26自学笔记">
+<meta name="twitter:description" content="笔记">
+<meta name="twitter:image" content="http://yoursite.com/images/this.jpg">
 
 
 
@@ -116,9 +116,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/08/15/ng-if-ng-show问题/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/08/22/8-22-8-26自学笔记/"/>
 
-  <title> ng-if ng-show问题 | Stone_Rivers's Blog </title>
+  <title> 8/22-8/26自学笔记 | Stone_Rivers's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -248,7 +248,7 @@
             
             
               
-                ng-if ng-show问题
+                8/22-8/26自学笔记
               
             
           </h1>
@@ -260,19 +260,38 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-15T16:30:48+08:00" content="2016-08-15">
-              2016-08-15
+            <time itemprop="dateCreated" datetime="2016-08-22T15:45:09+08:00" content="2016-08-22">
+              2016-08-22
             </time>
           </span>
 
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">笔记</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
           
 
           
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/08/15/ng-if-ng-show问题/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/15/ng-if-ng-show问题/" itemprop="commentsCount"></span>
+                <a href="/2016/08/22/8-22-8-26自学笔记/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/22/8-22-8-26自学笔记/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -295,20 +314,9 @@
       
 
       
-        <h3 id="ng-if-和-ng-show"><a href="#ng-if-和-ng-show" class="headerlink" title="ng-if 和 ng-show"></a>ng-if 和 ng-show</h3><p>ng-show:</p>
-<blockquote>
-<p>指令在表达式为 true 时显示指定的 HTML 元素，否则隐藏指定的 HTML 元素。</p>
+        <h4 id="this判断小窍门"><a href="#this判断小窍门" class="headerlink" title="this判断小窍门"></a>this判断小窍门</h4><blockquote>
+<p>是否new进行调用？<br>是–&gt;this指向new对象<br>否–&gt;函数是否用dot()调用？<br>是–&gt;this指向dot之前的对象<br>否–&gt;this指向全局对象window<br><img src="/images/this.jpg" alt="this如何判断判断"></p>
 </blockquote>
-<p>即将该元素的css属性display设置为none;</p>
-<p>ng-if:</p>
-<blockquote>
-<p>ng-if 指令用于在表达式为 false 时移除 HTML 元素。<br>  如果 if 语句执行的结果为 true，会添加移除元素，并显示。<br>  ng-if 指令不同于 ng-hide， ng-hide 隐藏元素，而 ng-if 是从 DOM 中移除元素。</p>
-</blockquote>
-<p>即直接移除dom树上的节点。</p>
-<h4 id="开发中遇到的问题"><a href="#开发中遇到的问题" class="headerlink" title="开发中遇到的问题"></a>开发中遇到的问题</h4><p>需求：点击红色框时展示，再次点击收回，点击灰色区域也是收回；<br><img src="/../images/fundDetail.jpg" alt="资金明细"><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;div class=<span class="string">"fund-dialog"</span> ng-show=<span class="string">"showTypeDialog"</span> ng-click=<span class="string">"showTypeDialog = false"</span>&gt;</div><div class="line">        &lt;ul&gt;</div><div class="line">            &lt;li class=<span class="string">"&#123;&#123;currType&#125;&#125;"</span> ng-repeat=<span class="string">"(key, value) in fundTypeList"</span> ng-click=<span class="string">"confirmFundType(key);"</span>&gt;</div><div class="line">                &lt;span class=<span class="string">"&#123;&#123;key&#125;&#125;"</span>&gt;&#123;&#123;value.text&#125;&#125;&lt;/span&gt;</div><div class="line">            &lt;/li&gt;</div><div class="line">        &lt;/ul&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
-<p>代码中若使用ng-if的话,ng-click无作用,但是若ng-click调用该方法，方法包含<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">showTypeDialog = <span class="literal">false</span></div></pre></td></tr></table></figure></p>
-<p>则有作用.<br>若用ng-show就没有这个问题<br>于是这里爆出一个问题：当ng-click执行的方法为修改状态并删除本身时，为什么无作用，是因为ng-click内直接写了方法的问题还是ng-if得问题。<br>网上也没找到相应的问题.<br>后续解决的话就补上</p>
-<h4 id="反转状态时，若只是修改true-false-则不需使用三目"><a href="#反转状态时，若只是修改true-false-则不需使用三目" class="headerlink" title="反转状态时，若只是修改true / false,则不需使用三目"></a>反转状态时，若只是修改true / false,则不需使用三目</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$scope.showTypeDialog = !$scope.showTypeDialog;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -331,7 +339,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/指令/" rel="tag">#指令</a>
+            <a href="/tags/this/" rel="tag">#this</a>
           
         </div>
       
@@ -340,17 +348,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/08/11/前端入门学习计划/" rel="next" title="前端入门学习计划">
-                <i class="fa fa-chevron-left"></i> 前端入门学习计划
+              <a href="/2016/08/19/8-15-8-19自学总结/" rel="next" title="8/15-8/19自学总结">
+                <i class="fa fa-chevron-left"></i> 8/15-8/19自学总结
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/08/19/8-15-8-19自学总结/" rel="prev" title="8/15-8/19自学总结">
-                8/15-8/19自学总结 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -365,10 +369,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/08/15/ng-if-ng-show问题/"
-     data-title="ng-if ng-show问题"
+        <div class="ds-share flat" data-thread-key="2016/08/22/8-22-8-26自学笔记/"
+     data-title="8/22-8/26自学笔记"
      data-content=""
-     data-url="http://yoursite.com/2016/08/15/ng-if-ng-show问题/">
+     data-url="http://yoursite.com/2016/08/22/8-22-8-26自学笔记/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -395,8 +399,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/08/15/ng-if-ng-show问题/"
-           data-title="ng-if ng-show问题" data-url="http://yoursite.com/2016/08/15/ng-if-ng-show问题/">
+      <div class="ds-thread" data-thread-key="2016/08/22/8-22-8-26自学笔记/"
+           data-title="8/22-8/26自学笔记" data-url="http://yoursite.com/2016/08/22/8-22-8-26自学笔记/">
       </div>
     
   </div>
@@ -487,7 +491,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#ng-if-和-ng-show"><span class="nav-number">1.</span> <span class="nav-text">ng-if 和 ng-show</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#开发中遇到的问题"><span class="nav-number">1.1.</span> <span class="nav-text">开发中遇到的问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#反转状态时，若只是修改true-false-则不需使用三目"><span class="nav-number">1.2.</span> <span class="nav-text">反转状态时，若只是修改true / false,则不需使用三目</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#this判断小窍门"><span class="nav-number">1.</span> <span class="nav-text">this判断小窍门</span></a></li></ol></div>
             
           </div>
         </section>
