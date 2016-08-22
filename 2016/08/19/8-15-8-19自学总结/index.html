@@ -90,7 +90,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/08/19/8-15-8-19自学总结/index.html">
 <meta property="og:site_name" content="Stone_Rivers's Blog">
 <meta property="og:description" content="一周自学总结">
-<meta property="og:updated_time" content="2016-08-19T09:08:52.840Z">
+<meta property="og:updated_time" content="2016-08-22T01:38:03.457Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="8/15-8/19自学总结">
 <meta name="twitter:description" content="一周自学总结">
@@ -304,8 +304,16 @@
 </blockquote>
 <h4 id="rem"><a href="#rem" class="headerlink" title="rem"></a>rem</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">html&#123;</div><div class="line">    font-size:625%;//1rem = 100px;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h4 id="img标签边框问题"><a href="#img标签边框问题" class="headerlink" title="img标签边框问题"></a>img标签边框问题</h4><blockquote>
-<p>问题产生：当img标签设置高宽后src=””;若有背景,则会看到一格白色的框;那是img的框，自带的，为什么之前没有发现：1、一般情况下img不会设置高宽（我开发中很少设置）,2、在正常开发情况下,src不可能为空,为什么，因为你既然写了img标签肯定是要引用的，不然你写他干嘛;<br>解决：隐藏边框;<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">img[src],img:not(src)&#123;</div><div class="line">    opacity: 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>问题产生：当img标签设置高宽后src=””;若有背景,则会看到一格白色的框;那是img的框，自带的，为什么之前没有发现：1、一般情况下img不会设置高宽（我开发中很少设置）,2、在正常开发情况下,src不可能为空,为什么，因为你既然写了img标签肯定是要引用的，不然你写他干嘛;<br>解决：隐藏边框;</p>
 </blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">img[src],img:not(src)&#123;</div><div class="line">    opacity: 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="替换主题next遇到的问题："><a href="#替换主题next遇到的问题：" class="headerlink" title="替换主题next遇到的问题："></a>替换主题next遇到的问题：</h4><blockquote>
+<p>设置了tags和categories后,页面点击出现无此页面<br>原因是要自己new tags和categories页面,并修改主题配置的menu的tags: /tags<br>tags页面修改:添加type: “tags”,categories也也一样;下面是代码</p>
+</blockquote>
+<p>添加页面：<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo new page <span class="string">"tags"</span></div><div class="line">hexo new page <span class="string">"categories"</span></div></pre></td></tr></table></figure></p>
+<p>menu设置<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">menu:</span></div><div class="line">  <span class="symbol">home:</span> /</div><div class="line">  <span class="symbol">categories:</span> /categories</div><div class="line">  <span class="comment">#about: /about</span></div><div class="line">  <span class="symbol">archives:</span> archives</div><div class="line">  <span class="symbol">tags:</span> /tags</div></pre></td></tr></table></figure></p>
+<p>页面内容:<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">title:</span> tags</div><div class="line"><span class="symbol">date:</span> <span class="number">2016</span>-08-<span class="number">19</span> <span class="number">17</span><span class="symbol">:</span><span class="number">50</span><span class="symbol">:</span><span class="number">24</span></div><div class="line"><span class="symbol">type:</span> <span class="string">"tags"</span></div><div class="line"><span class="symbol">comments:</span> <span class="literal">false</span></div></pre></td></tr></table></figure></p>
+<p>注意：页面最好设置成tags或者categories这样的跟自己想添加的内容一致,因为在menu中设置的是文件夹名,若不一致可能会出错;</p>
 
       
     </div>
@@ -474,7 +482,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一周新知识"><span class="nav-number">1.</span> <span class="nav-text">一周新知识</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#svg描边问题"><span class="nav-number">1.1.</span> <span class="nav-text">svg描边问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ng-if引起的作用于问题"><span class="nav-number">1.2.</span> <span class="nav-text">ng-if引起的作用于问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如何添加网页标题头前的小图标"><span class="nav-number">1.3.</span> <span class="nav-text">如何添加网页标题头前的小图标</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#rem"><span class="nav-number">1.4.</span> <span class="nav-text">rem</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#img标签边框问题"><span class="nav-number">1.5.</span> <span class="nav-text">img标签边框问题</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一周新知识"><span class="nav-number">1.</span> <span class="nav-text">一周新知识</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#svg描边问题"><span class="nav-number">1.1.</span> <span class="nav-text">svg描边问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ng-if引起的作用于问题"><span class="nav-number">1.2.</span> <span class="nav-text">ng-if引起的作用于问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如何添加网页标题头前的小图标"><span class="nav-number">1.3.</span> <span class="nav-text">如何添加网页标题头前的小图标</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#rem"><span class="nav-number">1.4.</span> <span class="nav-text">rem</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#img标签边框问题"><span class="nav-number">1.5.</span> <span class="nav-text">img标签边框问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#替换主题next遇到的问题："><span class="nav-number">1.6.</span> <span class="nav-text">替换主题next遇到的问题：</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
