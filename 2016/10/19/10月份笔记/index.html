@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Angular指令,主题," />
+  <meta name="keywords" content="笔记,原型对象,路由解码," />
 
 
 
@@ -84,16 +84,16 @@
 
 
 
-<meta name="description" content="一周自学总结">
+<meta name="description" content="笔记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="8/15-8/19自学总结">
-<meta property="og:url" content="http://yoursite.com/2016/08/19/8-15-8-19自学总结/index.html">
+<meta property="og:title" content="10月份笔记">
+<meta property="og:url" content="http://yoursite.com/2016/10/19/10月份笔记/index.html">
 <meta property="og:site_name" content="Stone_Rivers's Blog">
-<meta property="og:description" content="一周自学总结">
-<meta property="og:updated_time" content="2016-10-19T02:22:18.334Z">
+<meta property="og:description" content="笔记">
+<meta property="og:updated_time" content="2016-10-19T02:58:39.941Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="8/15-8/19自学总结">
-<meta name="twitter:description" content="一周自学总结">
+<meta name="twitter:title" content="10月份笔记">
+<meta name="twitter:description" content="笔记">
 
 
 
@@ -114,9 +114,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/08/19/8-15-8-19自学总结/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/10/19/10月份笔记/"/>
 
-  <title> 8/15-8/19自学总结 | Stone_Rivers's Blog </title>
+  <title> 10月份笔记 | Stone_Rivers's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -246,7 +246,7 @@
             
             
               
-                8/15-8/19自学总结
+                10月份笔记
               
             
           </h1>
@@ -258,8 +258,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-19T15:08:06+08:00" content="2016-08-19">
-              2016-08-19
+            <time itemprop="dateCreated" datetime="2016-10-19T10:17:00+08:00" content="2016-10-19">
+              2016-10-19
             </time>
           </span>
 
@@ -288,8 +288,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/08/19/8-15-8-19自学总结/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/19/8-15-8-19自学总结/" itemprop="commentsCount"></span>
+                <a href="/2016/10/19/10月份笔记/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/19/10月份笔记/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -312,27 +312,49 @@
       
 
       
-        <h4 id="svg描边问题"><a href="#svg描边问题" class="headerlink" title="svg描边问题"></a>svg描边问题</h4><blockquote>
-<p>svg描边从两侧描边,若在两格之间则会描两侧黑边,但是当-0.5或+0.5时则到一格像素中间,只会填满一格像素，不会垮像素。而且,svg描边从外面描,并没有类似border-box类似的属性;</p>
+        <h3 id="工作内容"><a href="#工作内容" class="headerlink" title="工作内容"></a>工作内容</h3><blockquote>
+<p>增加首页活动弹窗，从后台获取banner路径并展示功能、yztz.js增添方法slide</p>
 </blockquote>
-<h3 id="ng-if引起的作用域问题"><a href="#ng-if引起的作用域问题" class="headerlink" title="ng-if引起的作用域问题"></a>ng-if引起的作用域问题</h3><blockquote>
-<p>上篇博客说到的ng-if点击无效果问题，原因是ng-if会产生一格作用于，若要调用该controller的变量，在html页面中引用时要在前面添加$parent:$parent.xxx</p>
+<h3 id="自学"><a href="#自学" class="headerlink" title="自学"></a>自学</h3><blockquote>
+<p> 自学：了解原生对象引用，原型模式的特点，动态原型，继承等等。</p>
 </blockquote>
-<h3 id="如何添加网页标题头前的小图标"><a href="#如何添加网页标题头前的小图标" class="headerlink" title="如何添加网页标题头前的小图标"></a>如何添加网页标题头前的小图标</h3><blockquote>
-<p>在header标签中引用,即rel=”icon”就好;<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;link rel=<span class="string">"icon"</span> href=<span class="string">"xxx.png"</span>&gt;</div></pre></td></tr></table></figure></p>
+<h4 id="如何判断一个属性是在对象中还是在原型中？"><a href="#如何判断一个属性是在对象中还是在原型中？" class="headerlink" title="如何判断一个属性是在对象中还是在原型中？"></a>如何判断一个属性是在对象中还是在原型中？</h4><blockquote>
+<p>用hasOwnProperty()和in操作符  G.P152  只有在实例对象中有该属性才会放回true</p>
 </blockquote>
-<h3 id="rem"><a href="#rem" class="headerlink" title="rem"></a>rem</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">html&#123;</div><div class="line">    font-size:625%;//1rem = 100px;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="img标签边框问题"><a href="#img标签边框问题" class="headerlink" title="img标签边框问题"></a>img标签边框问题</h3><blockquote>
-<p>问题产生：当img标签设置高宽后src=””;若有背景,则会看到一格白色的框;那是img的框，自带的，为什么之前没有发现：1、一般情况下img不会设置高宽（我开发中很少设置）,2、在正常开发情况下,src不可能为空,为什么，因为你既然写了img标签肯定是要引用的，不然你写他干嘛;<br>解决：隐藏边框;</p>
+<h4 id="in操作符"><a href="#in操作符" class="headerlink" title="in操作符"></a>in操作符</h4><blockquote>
+<p>有两种方式是用in ，一种是直接单独使用还有for-in循环中使用。在单独使用时，in操作符如果能够通过对象访问到该属性就返回true，实例对象或者原型对象都可以</p>
 </blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">img[src],img:not(src)&#123;</div><div class="line">    opacity: 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="替换主题next遇到的问题："><a href="#替换主题next遇到的问题：" class="headerlink" title="替换主题next遇到的问题："></a>替换主题next遇到的问题：</h3><blockquote>
-<p>设置了tags和categories后,页面点击出现无此页面<br>原因是要自己new tags和categories页面,并修改主题配置的menu的tags: /tags<br>tags页面修改:添加type: “tags”,categories也也一样;下面是代码</p>
+<h4 id="原型构造函数和问题"><a href="#原型构造函数和问题" class="headerlink" title="原型构造函数和问题"></a>原型构造函数和问题</h4><blockquote>
+<p>Person.prototype = {name : stone,job : it};这种方式会将默认的prototype重写，导致新建的对象的构造函数不会指向Person。详见G.P155</p>
 </blockquote>
-<p>添加页面：<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo new page <span class="string">"tags"</span></div><div class="line">hexo new page <span class="string">"categories"</span></div></pre></td></tr></table></figure></p>
-<p>menu设置<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">menu:</span></div><div class="line">  <span class="symbol">home:</span> /</div><div class="line">  <span class="symbol">categories:</span> /categories</div><div class="line">  <span class="comment">#about: /about</span></div><div class="line">  <span class="symbol">archives:</span> archives</div><div class="line">  <span class="symbol">tags:</span> /tags</div></pre></td></tr></table></figure></p>
-<p>页面内容:<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">title:</span> tags</div><div class="line"><span class="symbol">date:</span> <span class="number">2016</span>-08-<span class="number">19</span> <span class="number">17</span><span class="symbol">:</span><span class="number">50</span><span class="symbol">:</span><span class="number">24</span></div><div class="line"><span class="symbol">type:</span> <span class="string">"tags"</span></div><div class="line"><span class="symbol">comments:</span> <span class="literal">false</span></div></pre></td></tr></table></figure></p>
-<p><a href="http://www.tuicool.com/articles/NneMnuF" target="_blank" rel="external">next主题配置</a><br>注意：页面最好设置成tags或者categories这样的跟自己想添加的内容一致,因为在menu中设置的是文件夹名,若不一致可能会出错;</p>
+<h4 id="重写原型对象"><a href="#重写原型对象" class="headerlink" title="重写原型对象"></a>重写原型对象</h4><blockquote>
+<p>重写原型对象切断了现有原型与任何之前已经存在的对象实例之间的联系，已经存在了的实例对象引用的任然是最初的原型 即：<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">Person.prototype = &#123;</div><div class="line">  constructor : Person,</div><div class="line">  name : stone,</div><div class="line">  age : <span class="number">18</span></div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>原型对象被重写后，其指向构造函数的指针会消失，所以有必要时要给原型中添加constructor,这时又有一个问题：这个constructor会变成可枚举属性(原本不可枚举)</p>
+<h4 id="对象的引用"><a href="#对象的引用" class="headerlink" title="对象的引用"></a>对象的引用</h4><blockquote>
+<p>对象通过引用来传递，永远不会被复制</p>
+</blockquote>
+<h4 id="原型模式的缺点"><a href="#原型模式的缺点" class="headerlink" title="原型模式的缺点"></a>原型模式的缺点</h4><blockquote>
+<p>对于包含引用类型的属性值而言，一般需要单独修改某些属性值，而在原型模式下，只要其中一个实例修改了该属性，所有用到该属性的实例全部会修改</p>
+</blockquote>
+<h4 id="img在div中居中"><a href="#img在div中居中" class="headerlink" title="img在div中居中"></a>img在div中居中</h4><blockquote>
+<p>让img绝对定位，四个方向全都设置为0，然后margin: auto 0;</p>
+</blockquote>
+<h4 id="路由解码编码的三种方式"><a href="#路由解码编码的三种方式" class="headerlink" title="路由解码编码的三种方式"></a>路由解码编码的三种方式</h4><blockquote>
+<p>escape()、encodeURI()、encodeURIComponent() 用法：<a href="http://www.cnblogs.com/tylerdonet/p/3483836.html" target="_blank" rel="external">http://www.cnblogs.com/tylerdonet/p/3483836.html</a></p>
+</blockquote>
+<h4 id="indexOf"><a href="#indexOf" class="headerlink" title="indexOf()"></a>indexOf()</h4><blockquote>
+<p>记住：匹配的是字符串！b.indexOf(a);  a是片段，b是整个。a是1000的话，b是10001，也会匹配。</p>
+</blockquote>
+<h4 id="设置localStorage"><a href="#设置localStorage" class="headerlink" title="设置localStorage"></a>设置localStorage</h4><blockquote>
+<p>window.localStorage.setItem(key,id);  取：window.localStorage.getItem(‘key’);</p>
+</blockquote>
+<h4 id="关闭方法不做在指定可见的按钮上"><a href="#关闭方法不做在指定可见的按钮上" class="headerlink" title="关闭方法不做在指定可见的按钮上"></a>关闭方法不做在指定可见的按钮上</h4><blockquote>
+<p>按钮在图上即可，在图上的可见按钮部分做个透明的区域来当做关闭区域，此方法可更好的统一多端样式问题。</p>
+</blockquote>
+<h4 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h4><blockquote>
+<p>Object.keys(): 该方法可以取得对象上所有可枚举的实例属性<br>Object.getOwnPropertyNames() : 取到所有实例属性，无论可否枚举<br>                               这两个方法都可以替代for-in循环</p>
+</blockquote>
 
       
     </div>
@@ -355,9 +377,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Angular指令/" rel="tag">#Angular指令</a>
+            <a href="/tags/笔记/" rel="tag">#笔记</a>
           
-            <a href="/tags/主题/" rel="tag">#主题</a>
+            <a href="/tags/原型对象/" rel="tag">#原型对象</a>
+          
+            <a href="/tags/路由解码/" rel="tag">#路由解码</a>
           
         </div>
       
@@ -366,17 +390,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/08/15/ng-if-ng-show问题/" rel="next" title="ng-if ng-show问题">
-                <i class="fa fa-chevron-left"></i> ng-if ng-show问题
+              <a href="/2016/09/14/9月笔记总结/" rel="next" title="9月笔记总结">
+                <i class="fa fa-chevron-left"></i> 9月笔记总结
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/08/22/8-22-8-26自学笔记/" rel="prev" title="8/22-8/26自学笔记">
-                8/22-8/26自学笔记 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -391,10 +411,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/08/19/8-15-8-19自学总结/"
-     data-title="8/15-8/19自学总结"
+        <div class="ds-share flat" data-thread-key="2016/10/19/10月份笔记/"
+     data-title="10月份笔记"
      data-content=""
-     data-url="http://yoursite.com/2016/08/19/8-15-8-19自学总结/">
+     data-url="http://yoursite.com/2016/10/19/10月份笔记/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -421,8 +441,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/08/19/8-15-8-19自学总结/"
-           data-title="8/15-8/19自学总结" data-url="http://yoursite.com/2016/08/19/8-15-8-19自学总结/">
+      <div class="ds-thread" data-thread-key="2016/10/19/10月份笔记/"
+           data-title="10月份笔记" data-url="http://yoursite.com/2016/10/19/10月份笔记/">
       </div>
     
   </div>
@@ -513,7 +533,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#svg描边问题"><span class="nav-number">1.</span> <span class="nav-text">svg描边问题</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ng-if引起的作用域问题"><span class="nav-number"></span> <span class="nav-text">ng-if引起的作用域问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何添加网页标题头前的小图标"><span class="nav-number"></span> <span class="nav-text">如何添加网页标题头前的小图标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#rem"><span class="nav-number"></span> <span class="nav-text">rem</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#img标签边框问题"><span class="nav-number"></span> <span class="nav-text">img标签边框问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#替换主题next遇到的问题："><span class="nav-number"></span> <span class="nav-text">替换主题next遇到的问题：</span></a></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#工作内容"><span class="nav-number">1.</span> <span class="nav-text">工作内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自学"><span class="nav-number">2.</span> <span class="nav-text">自学</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#如何判断一个属性是在对象中还是在原型中？"><span class="nav-number">2.1.</span> <span class="nav-text">如何判断一个属性是在对象中还是在原型中？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#in操作符"><span class="nav-number">2.2.</span> <span class="nav-text">in操作符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#原型构造函数和问题"><span class="nav-number">2.3.</span> <span class="nav-text">原型构造函数和问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#重写原型对象"><span class="nav-number">2.4.</span> <span class="nav-text">重写原型对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#对象的引用"><span class="nav-number">2.5.</span> <span class="nav-text">对象的引用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#原型模式的缺点"><span class="nav-number">2.6.</span> <span class="nav-text">原型模式的缺点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#img在div中居中"><span class="nav-number">2.7.</span> <span class="nav-text">img在div中居中</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#路由解码编码的三种方式"><span class="nav-number">2.8.</span> <span class="nav-text">路由解码编码的三种方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#indexOf"><span class="nav-number">2.9.</span> <span class="nav-text">indexOf()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#设置localStorage"><span class="nav-number">2.10.</span> <span class="nav-text">设置localStorage</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#关闭方法不做在指定可见的按钮上"><span class="nav-number">2.11.</span> <span class="nav-text">关闭方法不做在指定可见的按钮上</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#方法"><span class="nav-number">2.12.</span> <span class="nav-text">方法</span></a></li></ol></li></ol></div>
             
           </div>
         </section>

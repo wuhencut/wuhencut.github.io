@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="自学," />
 
 
 
@@ -90,7 +90,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/09/14/9月笔记总结/index.html">
 <meta property="og:site_name" content="Stone_Rivers's Blog">
 <meta property="og:description" content="笔记">
-<meta property="og:updated_time" content="2016-09-18T06:24:58.861Z">
+<meta property="og:updated_time" content="2016-10-19T02:41:18.168Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="9月笔记总结">
 <meta name="twitter:description" content="笔记">
@@ -312,8 +312,8 @@
       
 
       
-        <h3 id="这两周工作内容："><a href="#这两周工作内容：" class="headerlink" title="这两周工作内容："></a>这两周工作内容：</h3><blockquote>
-<p>练习滑动门代码、开会，了解T+D模式、给策略宝和微策略添加活动banner和活动详情文章、手打百度首页、完成埋点需求、检查诸葛IO上对埋点的统计书否准确、主要自学看高程，巩固基础。</p>
+        <h3 id="工作内容："><a href="#工作内容：" class="headerlink" title="工作内容："></a>工作内容：</h3><blockquote>
+<p>练习滑动门代码、开会，了解T+D模式、给策略宝和微策略添加活动banner和活动详情文章、手打百度首页、完成埋点需求、检查诸葛IO上对埋点的统计书否准确、主要自学看高程，巩固基础。<br>  主站项目修改banner图</p>
 </blockquote>
 <h3 id="自学"><a href="#自学" class="headerlink" title="自学"></a>自学</h3><h4 id="ajax：post-get"><a href="#ajax：post-get" class="headerlink" title="ajax：post/get"></a>ajax：post/get</h4><blockquote>
 <p>与 POST 相比，GET 更简单也更快，并且在大部分情况下都能用。然而，在以下情况中，请使用 POST 请求：无法使用缓存文件（更新服务器上的文件或数据库）向服务器发送大量数据（POST 没有数据量限制）发送包含未知字符的用户输入时，POST 比 GET 更稳定也更可靠。</p>
@@ -353,7 +353,25 @@
 <p>Cookie是保存在客户端上的, 而Session是保存在服务器中. 当服务器收到用户发出的Cookie时, 会根据Cookie中的SessionID来查找对应的Session, 如没有则会生成一个新的SessionID返回给用户</p>
 </blockquote>
 <p>总而言之, Cookie和Session就是同一样东西存放地方不同而已.</p>
-<h3 id="小知识点"><a href="#小知识点" class="headerlink" title="小知识点"></a>小知识点</h3><ul><br>    <li><strong>caller和callee 详见G.P113-P115</strong><br>    caller:这个属性保存着调用当前函数的函数的引用;<br>            callee:该属性是一个指针，指向拥有这个arguments对象的函数;(做阶乘函数)<br>          <figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function factorial(num)&#123;</div><div class="line">    <span class="keyword">if</span>(num &lt;= <span class="number">1</span>)&#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">    &#125;<span class="keyword">else</span> &#123;</div><div class="line">        <span class="keyword">return</span> num * arguments.callee(num - <span class="number">1</span>)</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure><br><br>          上面的arguments.callee(num - 1); 等于是 factorial(num - 1);<br>    </li><br>    <li><strong>arguments</strong><br>        主要用来保存函数的参数</li><br>    <li><strong>call &amp; apply方法</strong><br>        扩充函数赖以运行的作用域，对象不需要与函数有任何耦合关系<br>    </li><br>    <li><strong>布尔类型</strong><br>        布尔表达式中的所有对象都会被转换成true  new Boolean()即创建了一个布尔对象<br>    </li><br>    <li><strong>valueOf()</strong><br>        返回对象表示的基本类型的数值<br>    </li><br>    <li><strong>toFixed()</strong><br>        0-20个小数<br>    </li><br>    <li><strong>toPrecision()</strong><br>        根据需求实际来调用toExponential()(该方法返回指数表达法)和toFixed()<br>        可以表现1-21位小数<br>    </li><br>    <li><strong>exec()/match()/search()</strong><br>        pattern.exec(text);   text.match(pattern);   search()方法参数与match()一样，返回字符串中第一个匹配项的索引  pattern:正则表达式或者RegExp对象;<br>    </li><br>    <li><strong>skew()做平行四边形</strong><br>         transform:skew(-30deg)：向顺时针方向倾斜30°，若其内有文本，则文本也会被倾斜，若想文本不被倾斜，则将包裹文本的标签设置反向倾斜相同角度，使其归正；<br>    </li><br></ul>
+<h4 id="IEDA无法RUN主站项目问题"><a href="#IEDA无法RUN主站项目问题" class="headerlink" title="IEDA无法RUN主站项目问题"></a>IEDA无法RUN主站项目问题</h4><blockquote>
+<p>原因：本地仓库缺少项目依赖，但是的确有通过maven下载到本地，但是不全。解决办法：从同事那拿来支持较全的本地仓库，可以通用。已备份repository和settings文件到F盘备需软件目录。<br>  settings文件设置：repository标签栏内写你想要放仓库的位置。<br>  maven设置：settings文件，maven版本（这个影响不大，idea自带的maven3可以支持。），repository目录；</p>
+</blockquote>
+<h4 id="prototype"><a href="#prototype" class="headerlink" title="prototype"></a>prototype</h4><blockquote>
+<p>[[Prototype]]不能直接访问，用isPrototypeOf()方法来返回的布尔值来判断是否是谁谁的原型</p>
+</blockquote>
+<h4 id="css-js谁先加载问题"><a href="#css-js谁先加载问题" class="headerlink" title="css/js谁先加载问题"></a>css/js谁先加载问题</h4><blockquote>
+<p>script脚本推荐放在最下边好处：防止因网络问题，页面加载时间长，出现空白；即便网络问题，浏览器也把DOM加载渲染完成，等待从服务端下载完js脚本，出现效果<br>  css不放在最下面原因通俗地讲：好比先穿好衣服在出去，浏览器先把css样式准备好，在加载结构层，使得页面有样子；如果放在下面，因为页面是从上往下加载，没有css，就剩下裸露的标签，很难看，使得用户体验不好</p>
+</blockquote>
+<h4 id="堆-栈"><a href="#堆-栈" class="headerlink" title="堆/栈"></a>堆/栈</h4><blockquote>
+<p>变量存在栈中，对象存在堆中</p>
+</blockquote>
+<h4 id="变量命名规范"><a href="#变量命名规范" class="headerlink" title="变量命名规范"></a>变量命名规范</h4><blockquote>
+<p>变量命名规范<br>  由字母(a-zA-Z)数字(0-9)下划线(_)以及美元符号($)<br>  不能由数字开头<br>  命名尽量用英文并且具有一定的含义<br>  如果有多个英文单词,后面单词的首字母大写<br>  不能使用关键字<br>  首字母不要大写，大写是有特殊含义的</p>
+</blockquote>
+<h4 id="getElementById不加S"><a href="#getElementById不加S" class="headerlink" title="getElementById不加S"></a>getElementById不加S</h4><blockquote>
+<p>getElementById 是根据ID获取唯一的元素，即使页面有多个相同的id也只返回第一个，所以返回的结果是一个dom元素，而getElementsByName是根据name属性来获取元素的，页面可以有多个name相同的元素，即使只有一个对应的name属性的元素，返回的结果也是一个dom元素的数组。 明显的区别就是一个返回单个元素，所以不能加S，一个返回数组，所以必须要加S</p>
+</blockquote>
+<h3 id="小知识点"><a href="#小知识点" class="headerlink" title="小知识点"></a>小知识点</h3><ul><br>    <li><strong>caller和callee 详见G.P113-P115</strong><br>    caller:这个属性保存着调用当前函数的函数的引用;<br>            callee:该属性是一个指针，指向拥有这个arguments对象的函数;(做阶乘函数)<br>          <figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function factorial(num)&#123;</div><div class="line">    <span class="keyword">if</span>(num &lt;= <span class="number">1</span>)&#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">    &#125;<span class="keyword">else</span> &#123;</div><div class="line">        <span class="keyword">return</span> num * arguments.callee(num - <span class="number">1</span>)</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure><br><br>          上面的<code>arguments.callee(num - 1);</code> 等于是 <code>factorial(num - 1);</code><br>    </li><br>    <li><strong>arguments</strong><br>        主要用来保存函数的参数</li><br>    <li><strong>call &amp; apply方法</strong><br>        扩充函数赖以运行的作用域，对象不需要与函数有任何耦合关系<br>    </li><br>    <li><strong>布尔类型</strong><br>        布尔表达式中的所有对象都会被转换成true  new Boolean()即创建了一个布尔对象<br>    </li><br>    <li><strong>valueOf()</strong><br>        返回对象表示的基本类型的数值<br>    </li><br>    <li><strong>toFixed()</strong><br>        0-20个小数<br>    </li><br>    <li><strong>toPrecision()</strong><br>        根据需求实际来调用toExponential()(该方法返回指数表达法)和toFixed()<br>        可以表现1-21位小数<br>    </li><br>    <li><strong>exec()/match()/search()</strong><br>        pattern.exec(text);   text.match(pattern);   search()方法参数与match()一样，返回字符串中第一个匹配项的索引  pattern:正则表达式或者RegExp对象;<br>    </li><br>    <li><strong>skew()做平行四边形</strong><br>         transform:skew(-30deg)：向顺时针方向倾斜30°，若其内有文本，则文本也会被倾斜，若想文本不被倾斜，则将包裹文本的标签设置反向倾斜相同角度，使其归正；<br>    </li><br></ul>
 
 
       
@@ -375,6 +393,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/自学/" rel="tag">#自学</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
@@ -387,6 +411,10 @@
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/10/19/10月份笔记/" rel="prev" title="10月份笔记">
+                10月份笔记 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -477,7 +505,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-count">8</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -494,7 +522,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">11</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -523,7 +551,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#这两周工作内容："><span class="nav-number">1.</span> <span class="nav-text">这两周工作内容：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自学"><span class="nav-number">2.</span> <span class="nav-text">自学</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#ajax：post-get"><span class="nav-number">2.1.</span> <span class="nav-text">ajax：post/get</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#RegExp类型"><span class="nav-number">2.2.</span> <span class="nav-text">RegExp类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#函数声明放在变量中问题"><span class="nav-number">2.3.</span> <span class="nav-text">函数声明放在变量中问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#版本-缓存"><span class="nav-number">2.4.</span> <span class="nav-text">版本/缓存</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#TCP-IP"><span class="nav-number">2.5.</span> <span class="nav-text">TCP/IP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#四次挥手关闭连接"><span class="nav-number">2.6.</span> <span class="nav-text">四次挥手关闭连接</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#三次握手建立连接"><span class="nav-number">2.7.</span> <span class="nav-text">三次握手建立连接</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Cookie工作原理"><span class="nav-number">2.8.</span> <span class="nav-text">Cookie工作原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#session"><span class="nav-number">2.9.</span> <span class="nav-text">session</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小知识点"><span class="nav-number">3.</span> <span class="nav-text">小知识点</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#工作内容："><span class="nav-number">1.</span> <span class="nav-text">工作内容：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自学"><span class="nav-number">2.</span> <span class="nav-text">自学</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#ajax：post-get"><span class="nav-number">2.1.</span> <span class="nav-text">ajax：post/get</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#RegExp类型"><span class="nav-number">2.2.</span> <span class="nav-text">RegExp类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#函数声明放在变量中问题"><span class="nav-number">2.3.</span> <span class="nav-text">函数声明放在变量中问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#版本-缓存"><span class="nav-number">2.4.</span> <span class="nav-text">版本/缓存</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#TCP-IP"><span class="nav-number">2.5.</span> <span class="nav-text">TCP/IP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#四次挥手关闭连接"><span class="nav-number">2.6.</span> <span class="nav-text">四次挥手关闭连接</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#三次握手建立连接"><span class="nav-number">2.7.</span> <span class="nav-text">三次握手建立连接</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Cookie工作原理"><span class="nav-number">2.8.</span> <span class="nav-text">Cookie工作原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#session"><span class="nav-number">2.9.</span> <span class="nav-text">session</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#IEDA无法RUN主站项目问题"><span class="nav-number">2.10.</span> <span class="nav-text">IEDA无法RUN主站项目问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#prototype"><span class="nav-number">2.11.</span> <span class="nav-text">prototype</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#css-js谁先加载问题"><span class="nav-number">2.12.</span> <span class="nav-text">css/js谁先加载问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#堆-栈"><span class="nav-number">2.13.</span> <span class="nav-text">堆/栈</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#变量命名规范"><span class="nav-number">2.14.</span> <span class="nav-text">变量命名规范</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#getElementById不加S"><span class="nav-number">2.15.</span> <span class="nav-text">getElementById不加S</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小知识点"><span class="nav-number">3.</span> <span class="nav-text">小知识点</span></a></li></ol></div>
             
           </div>
         </section>
