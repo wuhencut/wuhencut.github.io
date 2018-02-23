@@ -85,14 +85,16 @@
 
 
 <meta name="description" content="一周自学总结">
+<meta name="keywords" content="Angular指令,主题">
 <meta property="og:type" content="article">
-<meta property="og:title" content="8/15-8/19自学总结">
+<meta property="og:title" content="8&#x2F;15-8&#x2F;19自学总结">
 <meta property="og:url" content="http://yoursite.com/2016/08/19/8-15-8-19自学总结/index.html">
-<meta property="og:site_name" content="Stone_Rivers's Blog">
+<meta property="og:site_name" content="Stone_Rivers&#39;s Blog">
 <meta property="og:description" content="一周自学总结">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2016-10-19T02:22:18.335Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="8/15-8/19自学总结">
+<meta name="twitter:title" content="8&#x2F;15-8&#x2F;19自学总结">
 <meta name="twitter:description" content="一周自学总结">
 
 
@@ -319,20 +321,20 @@
 <p>上篇博客说到的ng-if点击无效果问题，原因是ng-if会产生一格作用于，若要调用该controller的变量，在html页面中引用时要在前面添加$parent:$parent.xxx</p>
 </blockquote>
 <h3 id="如何添加网页标题头前的小图标"><a href="#如何添加网页标题头前的小图标" class="headerlink" title="如何添加网页标题头前的小图标"></a>如何添加网页标题头前的小图标</h3><blockquote>
-<p>在header标签中引用,即rel=”icon”就好;<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;link rel=<span class="string">"icon"</span> href=<span class="string">"xxx.png"</span>&gt;</div></pre></td></tr></table></figure></p>
+<p>在header标签中引用,即rel=”icon”就好;<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel=<span class="string">"icon"</span> href=<span class="string">"xxx.png"</span>&gt;</span><br></pre></td></tr></table></figure></p>
 </blockquote>
-<h3 id="rem"><a href="#rem" class="headerlink" title="rem"></a>rem</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">html&#123;</div><div class="line">    font-size:625%;//1rem = 100px;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="rem"><a href="#rem" class="headerlink" title="rem"></a>rem</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">html&#123;</span><br><span class="line">    font-size:625%;//1rem = 100px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="img标签边框问题"><a href="#img标签边框问题" class="headerlink" title="img标签边框问题"></a>img标签边框问题</h3><blockquote>
 <p>问题产生：当img标签设置高宽后src=””;若有背景,则会看到一格白色的框;那是img的框，自带的，为什么之前没有发现：1、一般情况下img不会设置高宽（我开发中很少设置）,2、在正常开发情况下,src不可能为空,为什么，因为你既然写了img标签肯定是要引用的，不然你写他干嘛;<br>解决：隐藏边框;</p>
 </blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">img[src],img:not(src)&#123;</div><div class="line">    opacity: 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">img[src],img:not(src)&#123;</span><br><span class="line">    opacity: 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="替换主题next遇到的问题："><a href="#替换主题next遇到的问题：" class="headerlink" title="替换主题next遇到的问题："></a>替换主题next遇到的问题：</h3><blockquote>
 <p>设置了tags和categories后,页面点击出现无此页面<br>原因是要自己new tags和categories页面,并修改主题配置的menu的tags: /tags<br>tags页面修改:添加type: “tags”,categories也也一样;下面是代码</p>
 </blockquote>
-<p>添加页面：<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo new page <span class="string">"tags"</span></div><div class="line">hexo new page <span class="string">"categories"</span></div></pre></td></tr></table></figure></p>
-<p>menu设置<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">menu:</span></div><div class="line">  <span class="symbol">home:</span> /</div><div class="line">  <span class="symbol">categories:</span> /categories</div><div class="line">  <span class="comment">#about: /about</span></div><div class="line">  <span class="symbol">archives:</span> archives</div><div class="line">  <span class="symbol">tags:</span> /tags</div></pre></td></tr></table></figure></p>
-<p>页面内容:<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">title:</span> tags</div><div class="line"><span class="symbol">date:</span> <span class="number">2016</span>-08-<span class="number">19</span> <span class="number">17</span><span class="symbol">:</span><span class="number">50</span><span class="symbol">:</span><span class="number">24</span></div><div class="line"><span class="symbol">type:</span> <span class="string">"tags"</span></div><div class="line"><span class="symbol">comments:</span> <span class="literal">false</span></div></pre></td></tr></table></figure></p>
-<p><a href="http://www.tuicool.com/articles/NneMnuF" target="_blank" rel="external">next主题配置</a><br>注意：页面最好设置成tags或者categories这样的跟自己想添加的内容一致,因为在menu中设置的是文件夹名,若不一致可能会出错;</p>
+<p>添加页面：<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo new page <span class="string">"tags"</span></span><br><span class="line">hexo new page <span class="string">"categories"</span></span><br></pre></td></tr></table></figure></p>
+<p>menu设置<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">menu:</span></span><br><span class="line">  <span class="symbol">home:</span> /</span><br><span class="line">  <span class="symbol">categories:</span> /categories</span><br><span class="line">  <span class="comment">#about: /about</span></span><br><span class="line">  <span class="symbol">archives:</span> archives</span><br><span class="line">  <span class="symbol">tags:</span> /tags</span><br></pre></td></tr></table></figure></p>
+<p>页面内容:<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">title:</span> tags</span><br><span class="line"><span class="symbol">date:</span> <span class="number">2016</span>-08-<span class="number">19</span> <span class="number">17</span><span class="symbol">:</span><span class="number">50</span><span class="symbol">:</span><span class="number">24</span></span><br><span class="line"><span class="symbol">type:</span> <span class="string">"tags"</span></span><br><span class="line"><span class="symbol">comments:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure></p>
+<p><a href="http://www.tuicool.com/articles/NneMnuF" target="_blank" rel="noopener">next主题配置</a><br>注意：页面最好设置成tags或者categories这样的跟自己想添加的内容一致,因为在menu中设置的是文件夹名,若不一致可能会出错;</p>
 
       
     </div>
@@ -467,7 +469,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">12</span>
+              <span class="site-state-item-count">23</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

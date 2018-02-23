@@ -1,0 +1,678 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="笔记 知识点">
+<meta property="og:type" content="article">
+<meta property="og:title" content="构建工具知识点">
+<meta property="og:url" content="http://yoursite.com/2018/02/22/构建工具知识点/index.html">
+<meta property="og:site_name" content="Stone_Rivers&#39;s Blog">
+<meta property="og:description" content="笔记 知识点">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/images/image21.png">
+<meta property="og:updated_time" content="2018-02-22T08:10:40.148Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="构建工具知识点">
+<meta name="twitter:description" content="笔记 知识点">
+<meta name="twitter:image" content="http://yoursite.com/images/image21.png">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/02/22/构建工具知识点/"/>
+
+  <title> 构建工具知识点 | Stone_Rivers's Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Stone_Rivers's Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                构建工具知识点
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2018-02-22T14:32:26+08:00" content="2018-02-22">
+              2018-02-22
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">笔记</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2018/02/22/构建工具知识点/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/02/22/构建工具知识点/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h4 id="pm2守护进程"><a href="#pm2守护进程" class="headerlink" title="pm2守护进程"></a>pm2守护进程</h4><p> 全局安装pm2 ： npm install -g pm2<br>  进项目启动server.js，托管给express的端口号。地址等等<br>  clb监听的是4444 ，wcl3333，改nginx端口号：wcl8080，clb8888，本地localhost：wcl3333，clb4444</p>
+<h4 id="webpack"><a href="#webpack" class="headerlink" title="webpack"></a>webpack</h4><p>Webpack 会分析入口文件，解析包含依赖关系的各个文件。这些文件（模块）都打包到 bundle.js 。Webpack 会给每个模块分配一个唯一的 id 并通过这个 id 索引和访问模块。在页面启动时，会先执行 entry.js 中的代码，其它模块会在运行 require 的时候再执行。</p>
+<h4 id="CSS-loader前缀问题"><a href="#CSS-loader前缀问题" class="headerlink" title="CSS loader前缀问题"></a>CSS loader前缀问题</h4><blockquote>
+<p>如果每次 require CSS 文件的时候都要写 loader 前缀，是一件很繁琐的事情。我们可以根据模块类型（扩展名）来自动绑定需要的 loader。<br>  将 entry.js 中的 require(“!style!css!./style.css”) 修改为 require(“./style.css”) ，然后执行：<br>  $ webpack entry.js bundle.js –module-bind ‘css=style-loader!css-loader’<br>  “#” 有些环境下可能需要使用双引号<br>  $ webpack entry.js bundle.js –module-bind “css=style-loader!css-loader”<br>  建议都用””在执行的时候报错。””没问题</p>
+</blockquote>
+<h4 id="webpack遇到的问题"><a href="#webpack遇到的问题" class="headerlink" title="webpack遇到的问题"></a>webpack遇到的问题</h4><blockquote>
+<p>在config阶段无法执行命令行：webpack,解决：重新npm install<br>  在执行的时候，除了在命令行传入参数，还可以通过指定的配置文件来执行。默认情况下，会搜索当前目录的 webpack.config.js 文件</p>
+</blockquote>
+<h4 id="webpack-dev-server"><a href="#webpack-dev-server" class="headerlink" title="webpack-dev-server"></a>webpack-dev-server</h4><blockquote>
+<p>用该命令开发，会在localhost：8080创建一个express静态web服务器，会自动刷新页面<br><img src="/images/image21.png"></p>
+</blockquote>
+<h4 id="Xshell和Xftp使用"><a href="#Xshell和Xftp使用" class="headerlink" title="Xshell和Xftp使用"></a>Xshell和Xftp使用</h4><blockquote>
+<p>Xshell打开新建会话，输入你要上传文件的地址。输入账号密码后点击”新建文件传输”，找到要替换的文件的地址将其替换即可。<br>  Xshell打开新建终端，链接成功后，新建文件传输，这里自动会打开xftp，不用手动打开xftp并在上面操作。</p>
+</blockquote>
+<h4 id="–save-dev的作用"><a href="#–save-dev的作用" class="headerlink" title="–save-dev的作用"></a>–save-dev的作用</h4><blockquote>
+<p>“—save-dev”的意思是，在当前目录安装grunt的同时，顺便把grunt保存为这个目录的开发依赖项。配置package.json时，其中的“devDependencies”中就会存储开发依赖项。  不加-dev，，就会保存在dependencies下</p>
+</blockquote>
+<h4 id="grunt-contrib-copy"><a href="#grunt-contrib-copy" class="headerlink" title="grunt-contrib-copy"></a>grunt-contrib-copy</h4><blockquote>
+<p>自动复制文件</p>
+</blockquote>
+<h4 id="grunt-contrib-concat"><a href="#grunt-contrib-concat" class="headerlink" title="grunt-contrib-concat"></a>grunt-contrib-concat</h4><blockquote>
+<p>将多个类库写到一个总的类库中减少请求增快响应速度。类似于app.min.js   –参见wcl</p>
+</blockquote>
+<h4 id="grunt-contrib-uglify"><a href="#grunt-contrib-uglify" class="headerlink" title="grunt-contrib-uglify"></a>grunt-contrib-uglify</h4><blockquote>
+<p>压缩代码，mangle:fale 不混淆变量名<br>   preserveComments: ‘all’, //不删除注释，还可以为 false（删除全部注释）<br>  report: “min”//输出压缩率，可选的值有 false(不输出信息)   详见 ： <a href="http://www.cnblogs.com/artwl/p/3449303.html" target="_blank" rel="noopener">http://www.cnblogs.com/artwl/p/3449303.html</a></p>
+</blockquote>
+<h4 id="编译scss"><a href="#编译scss" class="headerlink" title="编译scss"></a>编译scss</h4><blockquote>
+<p>下载ruby最近版本 - 安装 - 设置编辑器file watcher - Program 地址：安装目录ruby/ bat / scss.bat</p>
+</blockquote>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/02/22/Angular知识点/" rel="next" title="Angular知识点">
+                <i class="fa fa-chevron-left"></i> Angular知识点
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/02/22/面试知识点/" rel="prev" title="面试知识点">
+                面试知识点 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2018/02/22/构建工具知识点/"
+     data-title="构建工具知识点"
+     data-content=""
+     data-url="http://yoursite.com/2018/02/22/构建工具知识点/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2018/02/22/构建工具知识点/"
+           data-title="构建工具知识点" data-url="http://yoursite.com/2018/02/22/构建工具知识点/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/headPic.JPG"
+               alt="Stone_Rivers" />
+          <p class="site-author-name" itemprop="name">Stone_Rivers</p>
+          <p class="site-description motion-element" itemprop="description">Pay it time & times!</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">23</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#pm2守护进程"><span class="nav-number">1.</span> <span class="nav-text">pm2守护进程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#webpack"><span class="nav-number">2.</span> <span class="nav-text">webpack</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CSS-loader前缀问题"><span class="nav-number">3.</span> <span class="nav-text">CSS loader前缀问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#webpack遇到的问题"><span class="nav-number">4.</span> <span class="nav-text">webpack遇到的问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#webpack-dev-server"><span class="nav-number">5.</span> <span class="nav-text">webpack-dev-server</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Xshell和Xftp使用"><span class="nav-number">6.</span> <span class="nav-text">Xshell和Xftp使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#–save-dev的作用"><span class="nav-number">7.</span> <span class="nav-text">–save-dev的作用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#grunt-contrib-copy"><span class="nav-number">8.</span> <span class="nav-text">grunt-contrib-copy</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#grunt-contrib-concat"><span class="nav-number">9.</span> <span class="nav-text">grunt-contrib-concat</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#grunt-contrib-uglify"><span class="nav-number">10.</span> <span class="nav-text">grunt-contrib-uglify</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#编译scss"><span class="nav-number">11.</span> <span class="nav-text">编译scss</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Stone_Rivers</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"wuhencut"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
