@@ -86,15 +86,17 @@
 
 <meta name="description" content="笔记 知识点">
 <meta property="og:type" content="article">
-<meta property="og:title" content="面试知识点">
-<meta property="og:url" content="http://yoursite.com/2018/02/22/面试知识点/index.html">
+<meta property="og:title" content="Angular知识点">
+<meta property="og:url" content="http://yoursite.com/2018/02/22/Angular知识点/index.html">
 <meta property="og:site_name" content="Stone_Rivers&#39;s Blog">
 <meta property="og:description" content="笔记 知识点">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-22T06:38:19.541Z">
+<meta property="og:image" content="http://yoursite.com/images/image19.png">
+<meta property="og:updated_time" content="2018-02-27T04:56:58.604Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="面试知识点">
+<meta name="twitter:title" content="Angular知识点">
 <meta name="twitter:description" content="笔记 知识点">
+<meta name="twitter:image" content="http://yoursite.com/images/image19.png">
 
 
 
@@ -115,9 +117,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/02/22/面试知识点/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/02/22/Angular知识点/"/>
 
-  <title> 面试知识点 | Stone_Rivers's Blog </title>
+  <title> Angular知识点 | Stone_Rivers's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -247,7 +249,7 @@
             
             
               
-                面试知识点
+                Angular知识点
               
             
           </h1>
@@ -259,7 +261,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2018-02-22T14:32:36+08:00" content="2018-02-22">
+            <time itemprop="dateCreated" datetime="2018-02-22T14:32:14+08:00" content="2018-02-22">
               2018-02-22
             </time>
           </span>
@@ -289,8 +291,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2018/02/22/面试知识点/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/02/22/面试知识点/" itemprop="commentsCount"></span>
+                <a href="/2018/02/22/Angular知识点/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/02/22/Angular知识点/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -313,9 +315,15 @@
       
 
       
-        <h4 id="func-func"><a href="#func-func" class="headerlink" title="func ; func()"></a>func ; func()</h4><blockquote>
-<p>func:定义时执行，func()：运行时执行</p>
+        <h4 id="指令模板：template，回调函数：link-在link中可执行请求，请求的服务写在最外层，看图"><a href="#指令模板：template，回调函数：link-在link中可执行请求，请求的服务写在最外层，看图" class="headerlink" title="指令模板：template，回调函数：link.在link中可执行请求，请求的服务写在最外层，看图"></a>指令模板：template，回调函数：link.在link中可执行请求，请求的服务写在最外层，看图</h4><p><img src="/images/image19.png"></p>
+<h4 id="angular自带的9种过滤器"><a href="#angular自带的9种过滤器" class="headerlink" title="angular自带的9种过滤器"></a>angular自带的9种过滤器</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;num | number : 2&#125;&#125;  格式化数字后并保留两位小数并每三位加逗号。&#123;&#123;num | number&#125;&#125; 不对数字进行小数点处理，每三位加逗号</span><br></pre></td></tr></table></figure>
+<p><a href="http://www.cnblogs.com/zhujierong/p/6136716.html" target="_blank" rel="noopener">angular自带的9种过滤器</a></p>
+<h4 id="ng-class"><a href="#ng-class" class="headerlink" title="ng-class"></a>ng-class</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ng-class=&quot;&#123;&apos;txt-red&apos;: true,&apos;txt-gray&apos;:false&#125;&quot; 当true时，显示红色，当false时显示灰色</span><br></pre></td></tr></table></figure>
+<h4 id="ng-bind"><a href="#ng-bind" class="headerlink" title="ng-bind"></a>ng-bind</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ng-bind=&quot;&#123;&apos;0&apos;:&apos;GO&apos;,&apos;1&apos;:&apos;完成&apos;,&apos;2&apos;:&apos;已领&apos;&#125;[item.status]  期货1.1acPacket页面，可省略不少代码</span><br></pre></td></tr></table></figure>
+<h4 id="goURL问题"><a href="#goURL问题" class="headerlink" title="goURL问题"></a>goURL问题</h4><blockquote>
+<p>当goURL页面本身带参数，而且该页面需要登录。页面数据又根据?的参数来获取，会导致?goURL=<strong><em>?</em></strong>、第二个?后重要的参数会被抹去不见。解决：1、goURL跳转登录的时候自己写清楚，2、ctrl里写清楚，当参数不穿的时候默认是什么值。</p>
 </blockquote>
+<h4 id="ng-repeat遍历如何在子列表中展示数据"><a href="#ng-repeat遍历如何在子列表中展示数据" class="headerlink" title="ng-repeat遍历如何在子列表中展示数据"></a>ng-repeat遍历如何在子列表中展示数据</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ng-repeat=<span class="string">"item in items"</span>,     exm : &lt;ul ng-repeat=<span class="string">"item in items"</span>&gt;&lt;li&gt;&#123;&#123;item.data&#125;&#125;&lt;<span class="regexp">/li&gt;&lt;/ul</span>&gt;  其中的item可用this代替，因为this指向item(双向绑定)</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -341,16 +349,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/02/22/构建工具知识点/" rel="next" title="构建工具知识点">
-                <i class="fa fa-chevron-left"></i> 构建工具知识点
+              <a href="/2018/02/22/杂知识点/" rel="next" title="杂知识点">
+                <i class="fa fa-chevron-left"></i> 杂知识点
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/02/23/CSS中居中的几种方式/" rel="prev" title="CSS中居中的几种方式">
-                CSS中居中的几种方式 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/02/22/构建工具知识点/" rel="prev" title="构建工具知识点">
+                构建工具知识点 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -366,10 +374,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2018/02/22/面试知识点/"
-     data-title="面试知识点"
+        <div class="ds-share flat" data-thread-key="2018/02/22/Angular知识点/"
+     data-title="Angular知识点"
      data-content=""
-     data-url="http://yoursite.com/2018/02/22/面试知识点/">
+     data-url="http://yoursite.com/2018/02/22/Angular知识点/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -396,8 +404,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2018/02/22/面试知识点/"
-           data-title="面试知识点" data-url="http://yoursite.com/2018/02/22/面试知识点/">
+      <div class="ds-thread" data-thread-key="2018/02/22/Angular知识点/"
+           data-title="Angular知识点" data-url="http://yoursite.com/2018/02/22/Angular知识点/">
       </div>
     
   </div>
@@ -488,7 +496,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#func-func"><span class="nav-number">1.</span> <span class="nav-text">func ; func()</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#指令模板：template，回调函数：link-在link中可执行请求，请求的服务写在最外层，看图"><span class="nav-number">1.</span> <span class="nav-text">指令模板：template，回调函数：link.在link中可执行请求，请求的服务写在最外层，看图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#angular自带的9种过滤器"><span class="nav-number">2.</span> <span class="nav-text">angular自带的9种过滤器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ng-class"><span class="nav-number">3.</span> <span class="nav-text">ng-class</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ng-bind"><span class="nav-number">4.</span> <span class="nav-text">ng-bind</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#goURL问题"><span class="nav-number">5.</span> <span class="nav-text">goURL问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ng-repeat遍历如何在子列表中展示数据"><span class="nav-number">6.</span> <span class="nav-text">ng-repeat遍历如何在子列表中展示数据</span></a></li></ol></div>
             
           </div>
         </section>
