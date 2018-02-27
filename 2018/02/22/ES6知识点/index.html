@@ -97,7 +97,7 @@
 <meta property="og:image" content="http://yoursite.com/images/image24.png">
 <meta property="og:image" content="http://yoursite.com/images/image25.png">
 <meta property="og:image" content="http://yoursite.com/images/image26.png">
-<meta property="og:updated_time" content="2018-02-23T07:30:32.110Z">
+<meta property="og:updated_time" content="2018-02-26T02:41:21.431Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ES6知识点">
 <meta name="twitter:description" content="笔记 知识点">
@@ -348,7 +348,28 @@
 <h5 id="path-delimiter"><a href="#path-delimiter" class="headerlink" title="path.delimiter"></a>path.delimiter</h5><blockquote>
 <p>返回对应平台下的路径分隔符，win下为’;’，*nix下为’:’<br><img src="/images/image26.png"></p>
 </blockquote>
-<p>#####</p>
+<h5 id="require-ecports-module-ecports"><a href="#require-ecports-module-ecports" class="headerlink" title="require ecports module.ecports"></a>require ecports module.ecports</h5><blockquote>
+<p>require 用来加载代码，而 exports 和 module.exports 则用来导出代码。<br>1、module.exports 初始值为一个空对象 {}<br>2、exports 是指向的 module.exports 的引用<br>3、require() 返回的是 module.exports 而不是 exports</p>
+</blockquote>
+<h5 id="exports-与-module-exports"><a href="#exports-与-module-exports" class="headerlink" title="exports 与 module.exports"></a>exports 与 module.exports</h5><p><a href="https://cnodejs.org/topic/5231a630101e574521e45ef8" target="_blank" rel="noopener">https://cnodejs.org/topic/5231a630101e574521e45ef8</a><br><a href="https://cnodejs.org/topic/52308842101e574521c16e06" target="_blank" rel="noopener">https://cnodejs.org/topic/52308842101e574521c16e06</a></p>
+<blockquote>
+<p>1.module.exports 初始值为一个空对象 {}<br>  2.exports 是指向的 module.exports 的引用<br>  3.require() 返回的是 module.exports 而不是 exports</p>
+</blockquote>
+<h5 id="filename"><a href="#filename" class="headerlink" title="__filename"></a>__filename</h5><blockquote>
+<p>Node.js中，在任何模块文件内部，可以使用__filename变量获取当前模块文件的带有完整绝对路径的文件名。</p>
+</blockquote>
+<h5 id="dirname"><a href="#dirname" class="headerlink" title="__dirname"></a>__dirname</h5><blockquote>
+<p>获得当前文件所在目录的完整目录名</p>
+</blockquote>
+<h4 id="key"><a href="#key" class="headerlink" title="key"></a>key</h4><blockquote>
+<p>当你不需要想某个模块进行复用(input)而需要重新渲染，可在元素内(<input placeholder="Enter your email address" key="email-input">)<br>  添加key值</p>
+</blockquote>
+<h4 id="slice"><a href="#slice" class="headerlink" title="slice"></a>slice</h4><blockquote>
+<p>slice() 方法返回一个从开始到结束（不包括结束）选择的数组的一部分浅拷贝到一个新数组对象。原始数组不会被修改</p>
+</blockquote>
+<h4 id="splice"><a href="#splice" class="headerlink" title="splice"></a>splice</h4><blockquote>
+<p>splice() 方法通过删除现有元素和/或添加新元素来更改一个数组的内容。  会修改调用的数组</p>
+</blockquote>
 
       
     </div>
@@ -483,7 +504,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -521,7 +542,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#let与var的区别"><span class="nav-number">1.</span> <span class="nav-text">let与var的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Promise"><span class="nav-number">2.</span> <span class="nav-text">Promise</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#node"><span class="nav-number">3.</span> <span class="nav-text">node</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#path-resolve"><span class="nav-number">3.1.</span> <span class="nav-text">path.resolve</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#path-isAbsolute-path"><span class="nav-number">3.2.</span> <span class="nav-text">path.isAbsolute(path)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#path-dirname-p"><span class="nav-number">3.3.</span> <span class="nav-text">path.dirname(p)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#path-basename-p-ext"><span class="nav-number">3.4.</span> <span class="nav-text">path.basename(p, [ext])</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#path-extname-p"><span class="nav-number">3.5.</span> <span class="nav-text">path.extname(p)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#path-sep"><span class="nav-number">3.6.</span> <span class="nav-text">path.sep</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#path-delimiter"><span class="nav-number">3.7.</span> <span class="nav-text">path.delimiter</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#let与var的区别"><span class="nav-number">1.</span> <span class="nav-text">let与var的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Promise"><span class="nav-number">2.</span> <span class="nav-text">Promise</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#node"><span class="nav-number">3.</span> <span class="nav-text">node</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#path-resolve"><span class="nav-number">3.1.</span> <span class="nav-text">path.resolve</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#path-isAbsolute-path"><span class="nav-number">3.2.</span> <span class="nav-text">path.isAbsolute(path)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#path-dirname-p"><span class="nav-number">3.3.</span> <span class="nav-text">path.dirname(p)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#path-basename-p-ext"><span class="nav-number">3.4.</span> <span class="nav-text">path.basename(p, [ext])</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#path-extname-p"><span class="nav-number">3.5.</span> <span class="nav-text">path.extname(p)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#path-sep"><span class="nav-number">3.6.</span> <span class="nav-text">path.sep</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#path-delimiter"><span class="nav-number">3.7.</span> <span class="nav-text">path.delimiter</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#require-ecports-module-ecports"><span class="nav-number">3.8.</span> <span class="nav-text">require ecports module.ecports</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#exports-与-module-exports"><span class="nav-number">3.9.</span> <span class="nav-text">exports 与 module.exports</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#filename"><span class="nav-number">3.10.</span> <span class="nav-text">__filename</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#dirname"><span class="nav-number">3.11.</span> <span class="nav-text">__dirname</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#key"><span class="nav-number">4.</span> <span class="nav-text">key</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#slice"><span class="nav-number">5.</span> <span class="nav-text">slice</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#splice"><span class="nav-number">6.</span> <span class="nav-text">splice</span></a></li></ol></div>
             
           </div>
         </section>

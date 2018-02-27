@@ -92,7 +92,7 @@
 <meta property="og:description" content="笔记 知识点">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/images/image19.png">
-<meta property="og:updated_time" content="2018-02-22T06:37:08.959Z">
+<meta property="og:updated_time" content="2018-02-26T08:21:44.266Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Angular知识点">
 <meta name="twitter:description" content="笔记 知识点">
@@ -323,6 +323,7 @@
 <h4 id="goURL问题"><a href="#goURL问题" class="headerlink" title="goURL问题"></a>goURL问题</h4><blockquote>
 <p>当goURL页面本身带参数，而且该页面需要登录。页面数据又根据?的参数来获取，会导致?goURL=<strong><em>?</em></strong>、第二个?后重要的参数会被抹去不见。解决：1、goURL跳转登录的时候自己写清楚，2、ctrl里写清楚，当参数不穿的时候默认是什么值。</p>
 </blockquote>
+<h4 id="ng-repeat遍历如何在子列表中展示数据"><a href="#ng-repeat遍历如何在子列表中展示数据" class="headerlink" title="ng-repeat遍历如何在子列表中展示数据"></a>ng-repeat遍历如何在子列表中展示数据</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ng-repeat=<span class="string">"item in items"</span>,     exm : &lt;ul ng-repeat=<span class="string">"item in items"</span>&gt;&lt;li&gt;&#123;&#123;item.data&#125;&#125;&lt;<span class="regexp">/li&gt;&lt;/ul</span>&gt;  其中的item可用this代替，因为this指向item(双向绑定)</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -348,8 +349,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/02/22/JS-DOM-CSS知识点/" rel="next" title="DOM/CSS知识点">
-                <i class="fa fa-chevron-left"></i> DOM/CSS知识点
+              <a href="/2018/02/22/杂知识点/" rel="next" title="杂知识点">
+                <i class="fa fa-chevron-left"></i> 杂知识点
               </a>
             
           </div>
@@ -457,7 +458,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -495,7 +496,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#指令模板：template，回调函数：link-在link中可执行请求，请求的服务写在最外层，看图"><span class="nav-number">1.</span> <span class="nav-text">指令模板：template，回调函数：link.在link中可执行请求，请求的服务写在最外层，看图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#angular自带的9种过滤器"><span class="nav-number">2.</span> <span class="nav-text">angular自带的9种过滤器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ng-class"><span class="nav-number">3.</span> <span class="nav-text">ng-class</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ng-bind"><span class="nav-number">4.</span> <span class="nav-text">ng-bind</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#goURL问题"><span class="nav-number">5.</span> <span class="nav-text">goURL问题</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#指令模板：template，回调函数：link-在link中可执行请求，请求的服务写在最外层，看图"><span class="nav-number">1.</span> <span class="nav-text">指令模板：template，回调函数：link.在link中可执行请求，请求的服务写在最外层，看图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#angular自带的9种过滤器"><span class="nav-number">2.</span> <span class="nav-text">angular自带的9种过滤器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ng-class"><span class="nav-number">3.</span> <span class="nav-text">ng-class</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ng-bind"><span class="nav-number">4.</span> <span class="nav-text">ng-bind</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#goURL问题"><span class="nav-number">5.</span> <span class="nav-text">goURL问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ng-repeat遍历如何在子列表中展示数据"><span class="nav-number">6.</span> <span class="nav-text">ng-repeat遍历如何在子列表中展示数据</span></a></li></ol></div>
             
           </div>
         </section>

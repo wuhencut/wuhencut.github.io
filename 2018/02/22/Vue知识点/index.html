@@ -91,10 +91,32 @@
 <meta property="og:site_name" content="Stone_Rivers&#39;s Blog">
 <meta property="og:description" content="笔记 知识点">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-22T06:56:16.757Z">
+<meta property="og:image" content="http://yoursite.com/images/image31.png">
+<meta property="og:image" content="http://yoursite.com/images/image32.png">
+<meta property="og:image" content="http://yoursite.com/images/image33.png">
+<meta property="og:image" content="http://yoursite.com/images/image34.png">
+<meta property="og:image" content="http://yoursite.com/images/image35.png">
+<meta property="og:image" content="http://yoursite.com/images/image36.png">
+<meta property="og:image" content="http://yoursite.com/images/image37.png">
+<meta property="og:image" content="http://yoursite.com/images/image38.png">
+<meta property="og:image" content="http://yoursite.com/images/image39.png">
+<meta property="og:image" content="http://yoursite.com/images/image40.png">
+<meta property="og:image" content="http://yoursite.com/images/image41.png">
+<meta property="og:image" content="http://yoursite.com/images/image42.png">
+<meta property="og:image" content="http://yoursite.com/images/image43.png">
+<meta property="og:image" content="http://yoursite.com/images/image44.png">
+<meta property="og:image" content="http://yoursite.com/images/image45.png">
+<meta property="og:image" content="http://yoursite.com/images/image46.png">
+<meta property="og:image" content="http://yoursite.com/images/image47.png">
+<meta property="og:image" content="http://yoursite.com/images/image48.png">
+<meta property="og:image" content="http://yoursite.com/images/image49.png">
+<meta property="og:image" content="http://yoursite.com/images/image50.png">
+<meta property="og:image" content="http://yoursite.com/images/image51.png">
+<meta property="og:updated_time" content="2018-02-26T03:06:56.212Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue知识点">
 <meta name="twitter:description" content="笔记 知识点">
+<meta name="twitter:image" content="http://yoursite.com/images/image31.png">
 
 
 
@@ -345,6 +367,91 @@
 <h4 id="计算属性-VS-method"><a href="#计算属性-VS-method" class="headerlink" title="计算属性  VS  method"></a>计算属性  VS  method</h4><blockquote>
 <p>计算属性是基于它们的依赖进行缓存的。计算属性只有在它的相关依赖发生改变时才会重新求值。这就意味着只要 message 还没有发生改变，多次访问 reversedMessage 计算属性会立即返回之前的计算结果，而不必再次执行函数。相比而言，只要发生重新渲染，method 调用总会执行该函数。<br>  我们为什么需要缓存？假设我们有一个性能开销比较大的的计算属性 A ，它需要遍历一个极大的数组和做大量的计算。然后我们可能有其他的计算属性依赖于 A 。如果没有缓存，我们将不可避免的多次执行 A 的 getter！如果你不希望有缓存，请用 method 替代</p>
 </blockquote>
+<h4 id="watch-–-vue"><a href="#watch-–-vue" class="headerlink" title="watch – vue"></a>watch – vue</h4><blockquote>
+<p>虽然计算属性在大多数情况下更合适，但有时也需要一个自定义的 watcher 。这是为什么 Vue 提供一个更通用的方法通过 watch 选项，来响应数据的变化。当你想要在数据变化响应时，执行异步操作或开销较大的操作，这是很有用的。</p>
+</blockquote>
+<h5 id="debounce-–-lodash-min-js"><a href="#debounce-–-lodash-min-js" class="headerlink" title="_.debounce – lodash.min.js"></a>_.debounce – lodash.min.js</h5><blockquote>
+<p>_.debounce 是一个通过 lodash 限制操作频率的函数  ,   ajax请求直到用户输入完毕才会发出</p>
+</blockquote>
+<p><img src="/images/image31.png"><br><img src="/images/image32.png"></p>
+<h4 id="v-bind-class-”-”"><a href="#v-bind-class-”-”" class="headerlink" title="v-bind=class:”{}”"></a>v-bind=class:”{}”</h4><blockquote>
+<p>v-bind:class=”{active ： isactive}”   要用对象形势包裹   如果是对象则可省去{}  , 也可以直接绑定计算属性 ， 也可以直接绑定数组，数组内还可以用三元表达式，还可在数组中写对象语法</p>
+</blockquote>
+<p><img src="/images/image33.png"><br><img src="/images/image34.png"></p>
+<h4 id="v-bind-style-”-”"><a href="#v-bind-style-”-”" class="headerlink" title="v-bind=style:”{}”"></a>v-bind=style:”{}”</h4><blockquote>
+<p>v-bind:style 的对象语法十分直观——看着非常像 CSS ，其实它是一个 JavaScript 对象。<br>  <div v-bind:style="{ color: activeColor, fontSize: fontSize + 'px' }"></div><br>  也可以直接使用对象，跟class类似’<br>  也可以用数组语法，跟class类似<br>  自动加前缀：当 v-bind:style 使用需要特定前缀的 CSS 属性时，如 transform ，Vue.js 会自动侦测并添加相应的前缀。</p>
+</blockquote>
+<h4 id="template"><a href="#template" class="headerlink" title="template"></a>template</h4><blockquote>
+<p>是一种用于保存客户端内容的机制，该内容在页面加载时不被渲染，但可以在运行时使用JavaScript进行实例化。<br>  可以将一个模板视为正在被存储以供随后在文档中使用的一个内容片段。<br>  虽然, 在加载页面的同时,解析器确实处理 template元素的内容，这样做只是确保这些内容是有效的; 然而,元素的内容不会被渲染。<br>  该元素没有childNode的概念，只有content概念，可将其content克隆出来</p>
+</blockquote>
+<h4 id="v-if-v-else-v-else-if"><a href="#v-if-v-else-v-else-if" class="headerlink" title="v-if / v-else / v-else-if"></a>v-if / v-else / v-else-if</h4><p><img src="/images/image35.png"></p>
+<blockquote>
+<p>v-else 元素必须紧跟在 v-if 或者 v-else-if 元素的后面——否则它将不会被识别。<br>  v-else-if，顾名思义，充当 v-if 的“else-if 块”。可以链式地使用多次<br>  v-for 跟v-if一起使用的时候，v-for 有更高的优先级</p>
+</blockquote>
+<h4 id="当利用索引直接设置一个项的注意事项"><a href="#当利用索引直接设置一个项的注意事项" class="headerlink" title="当利用索引直接设置一个项的注意事项"></a>当利用索引直接设置一个项的注意事项</h4><blockquote>
+<p>当你利用索引直接设置一个项时，例如： vm.items[indexOfItem] = newValue<br>  当你修改数组的长度时，例如： vm.items.length = newLength    都不会生效解决办法看图<br><img src="/images/image36.png"></p>
+</blockquote>
+<h4 id="DOM原生事件"><a href="#DOM原生事件" class="headerlink" title="DOM原生事件"></a>DOM原生事件</h4><blockquote>
+<p>用$event导入</p>
+</blockquote>
+<h4 id="v-on修饰符"><a href="#v-on修饰符" class="headerlink" title="v-on修饰符"></a>v-on修饰符</h4><blockquote>
+<p>在事件处理程序中调用 event.preventDefault() 或 event.stopPropagation() 是非常常见的需求。尽管我们可以在 methods 中轻松实现这点，但更好的方式是：methods 只有纯粹的数据逻辑，而不是去处理 DOM 事件细节。</p>
+</blockquote>
+<p>  点击事件将只会触发一次<br>  <figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a v-<span class="symbol">on:</span>click.once=<span class="string">"doThis"</span>&gt;&lt;<span class="regexp">/a&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p><img src="/images/image37.png"></p>
+<h4 id="is属性"><a href="#is属性" class="headerlink" title="is属性"></a>is属性</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">元素 &lt;ul&gt;，&lt;ol&gt;，&lt;table&gt;，&lt;select&gt; 限制了能被它包裹的元素，而一些像 &lt;option&gt; 这样的元素只能出现在某些其它元素内部</span><br></pre></td></tr></table></figure>
+<p><img src="/images/image38.png"></p>
+<h4 id="父子组建通信-props，父子组件"><a href="#父子组建通信-props，父子组件" class="headerlink" title="父子组建通信(props，父子组件)"></a>父子组建通信(props，父子组件)</h4><blockquote>
+<p>通过子组件props  详细看重构策略宝项目代码<br><img src="/images/image39.png"></p>
+</blockquote>
+<h5 id="props"><a href="#props" class="headerlink" title="props"></a>props</h5><blockquote>
+<p>父子组建之间数据通信单向数据流 。  组件实例的作用域是孤立的。这意味着不能 (也不应该) 在子组件的模板内直接引用父组件的数据。要让子组件使用父组件的数据，我们需要通过子组件的 props 选项。</p>
+</blockquote>
+<h5 id="props验证"><a href="#props验证" class="headerlink" title="props验证"></a>props验证</h5><blockquote>
+<p>我们可以为组件的 props 指定验证规格。如果传入的数据不符合规格，Vue 会发出警告，要指定验证规格，需要用对象的形式，而不能用字符串数组</p>
+</blockquote>
+<h5 id="自定义事件"><a href="#自定义事件" class="headerlink" title="自定义事件"></a>自定义事件</h5><blockquote>
+<p>父组件是使用 props 传递数据给子组件，但如果子组件要把数据传递回去，用自定义事件。<br>  使用 $on(eventName) 监听事件<br>  使用 $emit(eventName) 触发事件<br>  不能用 $on 侦听子组件抛出的事件，而必须在模板里直接用 v-on 绑定，就像以下的例子：<br>  <img src="/images/image40.png"><br>  <img src="/images/image41.png"></p>
+</blockquote>
+<h5 id="编译作用域"><a href="#编译作用域" class="headerlink" title="编译作用域"></a>编译作用域</h5><blockquote>
+<p>父组件模板的内容在父组件作用域内编译；子组件模板的内容在子组件作用域内编译<br><a href="https://github.com/wuhencut/vue-clb" target="_blank" rel="noopener">https://github.com/wuhencut/vue-clb</a></p>
+</blockquote>
+<h5 id="slot"><a href="#slot" class="headerlink" title="slot"></a>slot</h5><blockquote>
+<p>除非子组件模板包含至少一个 <slot> 插口，否则父组件的内容将会被丢弃。当子组件模板只有一个没有属性的 slot 时，父组件整个内容片段将插入到 slot 所在的 DOM 位置，并替换掉 slot 标签本身。<br>  具体看vue.js组件部分的slot<br>  <img src="/images/image42.png"></slot></p>
+</blockquote>
+<h6 id="slots"><a href="#slots" class="headerlink" title="slots"></a>slots</h6><blockquote>
+<p>可以从this.$slots获取VNodes列表中的静态内容:</p>
+</blockquote>
+<h4 id="DOM模板-和-字符串模板"><a href="#DOM模板-和-字符串模板" class="headerlink" title="DOM模板 和 字符串模板"></a>DOM模板 和 字符串模板</h4><blockquote>
+<p>dom模板就是原先就写在页面上的，能被浏览器识别的 html 结构，会在一加载就被浏览器渲染，所以要遵循 html 结构和标签命名，不然是不会被浏览器解析的，也就获取不到内容了，接着js获取 dom 节点的内容，就形成了 dom 模板。<br>  字符串模板可能原先放在服务器上啊，script标签里，js 的字符串里，原先不参与页面渲染的一串字符，所以呢 它可以不在乎 html 结构和标签命名，只要你最后根据模板生成内容的结构和命名正确就好。<br>  这两者其实区别就在于第一次获取到的方式不同，dom 模板参与浏览器解析，而字符串模板不参与，所以 dom 写起来要规范，而字符串模板不用</p>
+</blockquote>
+<h4 id="组件中的data必须是函数"><a href="#组件中的data必须是函数" class="headerlink" title="组件中的data必须是函数"></a>组件中的data必须是函数</h4><p>当同一个模块内用多次用到同一个组件的时候，而且每个组件要单独控制的时候，data不能放在全局。单独放在component中<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">data:</span>function ()&#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        count : <span class="number">0</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="set"><a href="#set" class="headerlink" title="$set"></a>$set</h4><blockquote>
+<p>Vue.set       ….. Vue.set(vm.someObject, ‘b’,2)</p>
+</blockquote>
+<h4 id="Vue-nextTick-callback"><a href="#Vue-nextTick-callback" class="headerlink" title="Vue.nextTick(callback)"></a>Vue.nextTick(callback)</h4><p><img src="/images/image43.png"><br><img src="/images/image44.png"></p>
+<h4 id="css-过渡类名"><a href="#css-过渡类名" class="headerlink" title="css 过渡类名"></a>css 过渡类名</h4><p><img src="/images/image45.png"></p>
+<h4 id="cubic-bezier"><a href="#cubic-bezier" class="headerlink" title="cubic-bezier"></a>cubic-bezier</h4><blockquote>
+<p>贝兹曲线中的绘制方法<br>  图上有四点，P0-3，其中P0、P3是默认的点，对应了[0,0], [1,1]。而剩下的P1、P2两点则是我们通过cubic-bezier()自定义的。cubic-bezier(x1, y1, x2, y2) 为自定义，x1,x2,y1,y2的值范围在[0, 1]。</p>
+</blockquote>
+<h4 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h4><blockquote>
+<p> 具体使用看vue   css相关<br><img src="/images/image46.png"></p>
+</blockquote>
+<h4 id="过渡模式"><a href="#过渡模式" class="headerlink" title="过渡模式"></a>过渡模式</h4><blockquote>
+<p>in-out: 新元素先进行过渡，完成之后当前元素过渡离开。<br>  out-in: 当前元素先进行过渡，完成之后新元素过渡进入。<br><img src="/images/image47.png"></p>
+</blockquote>
+<h4 id="transition"><a href="#transition" class="headerlink" title="transition"></a>transition</h4><blockquote>
+<p>transition   :看文档</p>
+</blockquote>
+<h4 id="transition-group"><a href="#transition-group" class="headerlink" title="transition-group"></a>transition-group</h4><p> <img src="/images/image48.png"></p>
+<blockquote>
+<p>v-move     ：<transition-group> 组件还有一个特殊之处。不仅可以进入和离开动画，还可以改变定位。要使用这个新功能只需了解新增的 v-move 特性，它会在元素的改变定位的过程中应用。像之前的类名一样，可以通过 name 属性来自定义前缀，也可以通过 move-class 属性手动设置。</transition-group></p>
+</blockquote>
+<p>  tag<br>   <img src="/images/image49.png"></p>
+<h4 id="Vue-directive"><a href="#Vue-directive" class="headerlink" title="Vue.directive"></a>Vue.directive</h4><blockquote>
+<p>除了默认设置的核心指令( v-model 和 v-show ),Vue 也允许注册自定义指令。注意，在 Vue2.0 里面，代码复用的主要形式和抽象是组件——然而，有的情况下,你仍然需要对纯 DOM 元素进行底层操作,这时候就会用到自定义指令</p>
+</blockquote>
+<p><img src="/images/image50.png"><br><img src="/images/image51.png"></p>
 
       
     </div>
@@ -479,7 +586,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -517,7 +624,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#独立构建"><span class="nav-number">1.</span> <span class="nav-text">独立构建</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#运行构建"><span class="nav-number">2.</span> <span class="nav-text">运行构建</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Vue构造器"><span class="nav-number">2.1.</span> <span class="nav-text">Vue构造器</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#gt-箭头函数问题"><span class="nav-number">3.</span> <span class="nav-text">=&gt;箭头函数问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#v-on-v-bind缩写"><span class="nav-number">4.</span> <span class="nav-text">v-on / v-bind缩写</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#v-once指令"><span class="nav-number">5.</span> <span class="nav-text">v-once指令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#“双大括号”不能再html属性中试用"><span class="nav-number">6.</span> <span class="nav-text">“双大括号”不能再html属性中试用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#“双大括号”中可以试用js"><span class="nav-number">7.</span> <span class="nav-text">“双大括号”中可以试用js</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#v-html"><span class="nav-number">8.</span> <span class="nav-text">v-html</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#v-on"><span class="nav-number">9.</span> <span class="nav-text">v-on</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#v-bind"><span class="nav-number">10.</span> <span class="nav-text">v-bind</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#计算属性-VS-method"><span class="nav-number">11.</span> <span class="nav-text">计算属性  VS  method</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#独立构建"><span class="nav-number">1.</span> <span class="nav-text">独立构建</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#运行构建"><span class="nav-number">2.</span> <span class="nav-text">运行构建</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Vue构造器"><span class="nav-number">2.1.</span> <span class="nav-text">Vue构造器</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#gt-箭头函数问题"><span class="nav-number">3.</span> <span class="nav-text">=&gt;箭头函数问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#v-on-v-bind缩写"><span class="nav-number">4.</span> <span class="nav-text">v-on / v-bind缩写</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#v-once指令"><span class="nav-number">5.</span> <span class="nav-text">v-once指令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#“双大括号”不能再html属性中试用"><span class="nav-number">6.</span> <span class="nav-text">“双大括号”不能再html属性中试用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#“双大括号”中可以试用js"><span class="nav-number">7.</span> <span class="nav-text">“双大括号”中可以试用js</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#v-html"><span class="nav-number">8.</span> <span class="nav-text">v-html</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#v-on"><span class="nav-number">9.</span> <span class="nav-text">v-on</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#v-bind"><span class="nav-number">10.</span> <span class="nav-text">v-bind</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#计算属性-VS-method"><span class="nav-number">11.</span> <span class="nav-text">计算属性  VS  method</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#watch-–-vue"><span class="nav-number">12.</span> <span class="nav-text">watch – vue</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#debounce-–-lodash-min-js"><span class="nav-number">12.1.</span> <span class="nav-text">_.debounce – lodash.min.js</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#v-bind-class-”-”"><span class="nav-number">13.</span> <span class="nav-text">v-bind=class:”{}”</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#v-bind-style-”-”"><span class="nav-number">14.</span> <span class="nav-text">v-bind=style:”{}”</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#template"><span class="nav-number">15.</span> <span class="nav-text">template</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#v-if-v-else-v-else-if"><span class="nav-number">16.</span> <span class="nav-text">v-if / v-else / v-else-if</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#当利用索引直接设置一个项的注意事项"><span class="nav-number">17.</span> <span class="nav-text">当利用索引直接设置一个项的注意事项</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#DOM原生事件"><span class="nav-number">18.</span> <span class="nav-text">DOM原生事件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#v-on修饰符"><span class="nav-number">19.</span> <span class="nav-text">v-on修饰符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#is属性"><span class="nav-number">20.</span> <span class="nav-text">is属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#父子组建通信-props，父子组件"><span class="nav-number">21.</span> <span class="nav-text">父子组建通信(props，父子组件)</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#props"><span class="nav-number">21.1.</span> <span class="nav-text">props</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#props验证"><span class="nav-number">21.2.</span> <span class="nav-text">props验证</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#自定义事件"><span class="nav-number">21.3.</span> <span class="nav-text">自定义事件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#编译作用域"><span class="nav-number">21.4.</span> <span class="nav-text">编译作用域</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#slot"><span class="nav-number">21.5.</span> <span class="nav-text">slot</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#slots"><span class="nav-number">21.5.1.</span> <span class="nav-text">slots</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#DOM模板-和-字符串模板"><span class="nav-number">22.</span> <span class="nav-text">DOM模板 和 字符串模板</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#组件中的data必须是函数"><span class="nav-number">23.</span> <span class="nav-text">组件中的data必须是函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#set"><span class="nav-number">24.</span> <span class="nav-text">$set</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Vue-nextTick-callback"><span class="nav-number">25.</span> <span class="nav-text">Vue.nextTick(callback)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#css-过渡类名"><span class="nav-number">26.</span> <span class="nav-text">css 过渡类名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#cubic-bezier"><span class="nav-number">27.</span> <span class="nav-text">cubic-bezier</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#动画"><span class="nav-number">28.</span> <span class="nav-text">动画</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#过渡模式"><span class="nav-number">29.</span> <span class="nav-text">过渡模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#transition"><span class="nav-number">30.</span> <span class="nav-text">transition</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#transition-group"><span class="nav-number">31.</span> <span class="nav-text">transition-group</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Vue-directive"><span class="nav-number">32.</span> <span class="nav-text">Vue.directive</span></a></li></ol></div>
             
           </div>
         </section>
