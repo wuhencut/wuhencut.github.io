@@ -1,0 +1,763 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="笔记 知识点">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS-CSS-DOM知识点">
+<meta property="og:url" content="http://yoursite.com/2018/02/24/JS-CSS-DOM知识点/index.html">
+<meta property="og:site_name" content="Stone_Rivers&#39;s Blog">
+<meta property="og:description" content="笔记 知识点">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/images/image27.png">
+<meta property="og:image" content="http://yoursite.com/images/image28.png">
+<meta property="og:image" content="http://yoursite.com/images/image29.png">
+<meta property="og:image" content="http://yoursite.com/images/image30.png">
+<meta property="og:image" content="http://yoursite.com/images/image52.png">
+<meta property="og:updated_time" content="2018-02-27T05:01:06.105Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JS-CSS-DOM知识点">
+<meta name="twitter:description" content="笔记 知识点">
+<meta name="twitter:image" content="http://yoursite.com/images/image27.png">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/02/24/JS-CSS-DOM知识点/"/>
+
+  <title> JS-CSS-DOM知识点 | Stone_Rivers's Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Stone_Rivers's Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                JS-CSS-DOM知识点
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2018-02-24T16:06:40+08:00" content="2018-02-24">
+              2018-02-24
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/JS-DOM-CSS/" itemprop="url" rel="index">
+                    <span itemprop="name">JS-DOM-CSS</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2018/02/24/JS-CSS-DOM知识点/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/02/24/JS-CSS-DOM知识点/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h4 id="当多个头部固定切下面可滑动（微策略点卖点买结算页面，头部接个组件固定）"><a href="#当多个头部固定切下面可滑动（微策略点卖点买结算页面，头部接个组件固定）" class="headerlink" title="当多个头部固定切下面可滑动（微策略点卖点买结算页面，头部接个组件固定）"></a>当多个头部固定切下面可滑动（微策略点卖点买结算页面，头部接个组件固定）</h4><blockquote>
+<p>多个头部固定，且下面可滑动时，用div将要固定的div包裹住，设置高度即可。固定部分高度与外部高度一致，内部可流水布局，第二个固定头部也这么多，这么做的好处：用外层的流水布局将多个固定布局的流水展示，这样就不用设置多个fixed的top值。且下面是可滑动的，上面的外层流布局会被顶上去，所以，外层流布局只是当做将内容撑开的作用。然后将固定部分设置高z-index，这样当下面滑动至超出顶部时不会显示出来。详细可见微策略3.2版本的公告，TDTrade的头部等等。具体代码看下面<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">.user-tips .amount-tips &#123;</span><br><span class="line">    height: 0.43rem;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.user-tips .amount-tips .outer-tip &#123;</span><br><span class="line">    position: fixed;</span><br><span class="line">    height: 0.43rem;</span><br><span class="line">    width: 100%;</span><br><span class="line">    background-color: #0E1821</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.user-tips .amount-tips .tips-warp &#123;</span><br><span class="line">    display: table;</span><br><span class="line">    width: 100%;</span><br><span class="line">    height: 0.43rem;</span><br><span class="line">    z-index: 90;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.user-tips .amount-tips .tips-warp li &#123;</span><br><span class="line">    display: table-cell;</span><br><span class="line">    padding: 0.1rem 0 0 0.2rem;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.user-tips .lossgain-tip &#123;</span><br><span class="line">    display: block;</span><br><span class="line">    height: 0.6rem;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.user-tips .lossgain-tip .tip-content &#123;</span><br><span class="line">    background-color: #E2E2E2;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>outer-tip就是那个用来撑开高度用的。内部负责定位显示什么的</p>
+<h4 id="p标签不可包裹div"><a href="#p标签不可包裹div" class="headerlink" title="p标签不可包裹div"></a>p标签不可包裹div</h4><blockquote>
+<p>根据标准不合法，p标签只可以包裹比他小等级的标签。</p>
+</blockquote>
+<h4 id="换行："><a href="#换行：" class="headerlink" title="换行："></a>换行：</h4><p>word-break:break-all;overflow对数字没用。</p>
+<h4 id="背景图靠右一定距离"><a href="#背景图靠右一定距离" class="headerlink" title="背景图靠右一定距离"></a>背景图靠右一定距离</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background: url() no-repeat right 0.1rem(你要设置的距离) center;</span><br></pre></td></tr></table></figure>
+<h4 id="图片在div容器中会留白"><a href="#图片在div容器中会留白" class="headerlink" title="图片在div容器中会留白"></a>图片在div容器中会留白</h4><blockquote>
+<p>img默认属性是inline-block，在div容器中会留白，设置成block即可</p>
+</blockquote>
+<h4 id="背景有图和颜色"><a href="#背景有图和颜色" class="headerlink" title="背景有图和颜色"></a>背景有图和颜色</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">background: url(&quot;../../../images/icon-head.png&quot;) 0.15rem center no-repeat #FFFFFF;  （微策略myInfo页面头部就是这么做的）</span><br><span class="line">颜色用来设置背景色，图片用来设置背景图片，当然背景图还要设置background-size;</span><br></pre></td></tr></table></figure>
+<h4 id="元素有个能为空而不占据高度"><a href="#元素有个能为空而不占据高度" class="headerlink" title="元素有个能为空而不占据高度"></a>元素有个能为空而不占据高度</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;p class=&quot;desc&quot;  ng-bind=&quot;item.description ||&apos;&amp;nbsp;&apos;&quot;&gt;&#123;&#123;item.description&#125;&#125;&lt;/p&gt;   ng-bind绑定一个空格，使其不为空</span><br></pre></td></tr></table></figure>
+<h4 id="SVG-有预定义的形状元素"><a href="#SVG-有预定义的形状元素" class="headerlink" title="SVG 有预定义的形状元素"></a>SVG 有预定义的形状元素</h4><p><text><g><tspan>都属于svg标签</tspan></g></text></p>
+<blockquote>
+<p>矩形 <rect></rect>  rx,ry表示圆角大小<br>  圆形 <circle></circle><br>  椭圆 <ellipse></ellipse>  cx，cy表示圆心坐标，rx,ry表示横/纵向半径<br>  线 <line></line><br>  折线 <polyline></polyline><br>  多边形 <polygon></polygon><br>  路径 <path></path><br>  <a href="http://www.w3school.com.cn/svg/svg_rect.asp" target="_blank" rel="noopener">http://www.w3school.com.cn/svg/svg_rect.asp</a></p>
+</blockquote>
+<h4 id="svg描边问题"><a href="#svg描边问题" class="headerlink" title="svg描边问题"></a>svg描边问题</h4><blockquote>
+<p>svg画边框不同于一般的div画边框，svg以某个中心轴往两边各画一像素，所以，如果以整数为中心轴画的话会出现两像素渐变的边框，故取x.5为中心轴往两边画1px，由于多出0.5px，不会画，所以显示1px。是kline里画k线图为什么要加0.5px的问题所在</p>
+</blockquote>
+<h4 id="火狐浏览器标签问题"><a href="#火狐浏览器标签问题" class="headerlink" title="火狐浏览器标签问题"></a>火狐浏览器<a>标签问题</a></h4><blockquote>
+<p>该浏览器的h5页面中如果包含<a href="" ****="">，如果href为空，会刷新当前页面</a></p>
+</blockquote>
+<h4 id="微策略周-月K线图优化问题"><a href="#微策略周-月K线图优化问题" class="headerlink" title="微策略周/月K线图优化问题"></a>微策略周/月K线图优化问题</h4><blockquote>
+<p>之前由于切换tab时两个问题：<br>  1、多个klineChart。K线图会重复画，前K线图并不会消失，导致切换后的K线图画到下面的bug。我当时的处理：将klineChart ，<strong>Chart，CACHE_KLINE， CACHE_*</strong>设置为null，切<strong>chart设置了ng-if来控制显示。次方法解决了重复画制的问题，但是新问题：由于设置null，每次切换tab都会请求接口，造成服务器压力。<br>  2、只有一个chart.切换多次tab后，切换无效果。原因：drawKline（）只在getKlineData中执行。所以当CACHE_*</strong>都不为空的时候，klineChart不会被重新画制了。解决：在changeTab()方法中添加判断，当current == <strong><em> &amp;&amp; CAHCE_</em></strong>时执行 drawKline(CACHE_***,current)</p>
+</blockquote>
+<h4 id="IE内核情况下标签的问题"><a href="#IE内核情况下标签的问题" class="headerlink" title="IE内核情况下标签的问题"></a>IE内核情况下<a>标签的问题</a></h4><blockquote>
+<p>当<a>标签中有<img>标签时，会出现蓝色边框，亲测chrome，Firefox没问题，电脑自带的edge也没问题，可能是360内核的IE版本有问题<br>  解决办法：给img边框设置为0<br>  当IE浏览器下，a标签点击后出现虚线边框问题。解决：a:focus{outline:0}</a></p>
+</blockquote>
+<h4 id="网页被卷去高度各个语法"><a href="#网页被卷去高度各个语法" class="headerlink" title="网页被卷去高度各个语法"></a>网页被卷去高度各个语法</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">document.body.scrollTop: 网页被卷去的高</span><br><span class="line">document.body.offsetHeight: 网页可见区域高</span><br><span class="line">document.body.clientHeight: 网页可见区域高</span><br><span class="line">document.body.clientWidth: 网页可见区域宽</span><br><span class="line">document.body.offsetWidth: 网页可见区域宽：(包括边线的宽);</span><br></pre></td></tr></table></figure>
+<p>详见： <a href="http://www.cnblogs.com/xiaowei661/archive/2011/06/03/2070201.html" target="_blank" rel="noopener">网页被卷去高度各个语法</a></p>
+<h4 id="viewBox-svg知识"><a href="#viewBox-svg知识" class="headerlink" title="viewBox(svg知识)"></a>viewBox(svg知识)</h4><blockquote>
+<p>viewBox=”x, y, width, height”  // x:左上角横坐标，y:左上角纵坐标，width:宽度，height:高度  <symbol viewbox="0 0 33 32" id="rating"></symbol>  <svg viewbox="0 0 30 30"/></p>
+</blockquote>
+<h4 id="addEVentListener"><a href="#addEVentListener" class="headerlink" title="addEVentListener()"></a>addEVentListener()</h4><blockquote>
+<p>element.addEventListener(event, function, useCapture)</p>
+</blockquote>
+<h4 id="useCapture"><a href="#useCapture" class="headerlink" title="useCapture"></a>useCapture</h4><blockquote>
+<p>bool值 ，true :事件在捕获时执行   false ： 事件在冒泡时执行</p>
+</blockquote>
+<h4 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h4><p><img src="/images/image27.png"></p>
+<h4 id="和-的区别"><a href="#和-的区别" class="headerlink" title="== 和 === 的区别"></a>== 和 === 的区别</h4><p>== 在变量赋值时内存会存储值的类型；做双等号比较操作时，会先做<strong>临时类型转换</strong>再做比较，内存中存储的值还是原来的不会改变<br>双等号会造成类型转换，推荐一律使用三等号<br>js中用==会造成<strong>类型</strong>的转换，对后续代码会不会造成以外的影响？<br><a href="https://www.zhihu.com/question/31442029" target="_blank" rel="noopener">https://www.zhihu.com/question/31442029</a></p>
+<h5 id=""><a href="#" class="headerlink" title="=="></a>==</h5><p><img src="/images/image28.png"></p>
+<h5 id="-1"><a href="#-1" class="headerlink" title="==="></a>===</h5><p><img src="/images/image29.png"></p>
+<h4 id="meta-viewport"><a href="#meta-viewport" class="headerlink" title="meta - viewport"></a>meta - viewport</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=<span class="string">"viewport"</span> content=<span class="string">"width=device-width,height=device-height,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"</span>&gt;</span><br><span class="line"><span class="number">1</span>.width=device-width    /<span class="regexp">/应用程序的宽度和屏幕的宽度是一样的</span></span><br><span class="line"><span class="regexp">2.height=device-height  /</span><span class="regexp">/应用程序的高度和屏幕的高是一样的</span></span><br><span class="line"><span class="regexp">3.initial-scale=1.0  /</span><span class="regexp">/应用程序启动时候的缩放尺度（1.0表示不缩放）</span></span><br><span class="line"><span class="regexp">4.minimum-scale=1.0  /</span><span class="regexp">/用户可以缩放到的最小尺度（1.0表示不缩放）</span></span><br><span class="line"><span class="regexp">5.maximum-scale=1.0  /</span><span class="regexp">/用户可以放大到的最大尺度（1.0表示不缩放）</span></span><br><span class="line"><span class="regexp">6.user-scalable=no  /</span><span class="regexp">/用户是否可以通过他的手势来缩放整个应用程序，使应用程序的尺度发生一个改变</span></span><br></pre></td></tr></table></figure>
+<h4 id="Mixin"><a href="#Mixin" class="headerlink" title="Mixin"></a>Mixin</h4><blockquote>
+<p>解决多重继承问题  具体链接：<a href="https://www.zhihu.com/question/20778853" target="_blank" rel="noopener">https://www.zhihu.com/question/20778853</a><br>  理解：一个类有多个父类，这些父类又有自己的父类,为了利用多重继承的有点又解决缺点时，有了规格继承和实现继承(Mixin)<br>  规格：方法名相同。    实现：方法名，方法都要相同。            前者 ： I am      后者 I can</p>
+</blockquote>
+<h4 id="Meta标签中format-detection属性及含义"><a href="#Meta标签中format-detection属性及含义" class="headerlink" title="Meta标签中format-detection属性及含义"></a>Meta标签中format-detection属性及含义</h4><blockquote>
+<p>content=”telephone = no”iPhone中会将一串数字自动变成电话号码，点击的时候会弹出确认拨打的功能<br>  conteng=”email = no”   告诉设备不识别邮箱，点击之后不自动发送  email=no禁止作为邮箱地址！ email=yes就开启了把文字默认为邮箱地址，这个meta就不用写了,在默认是情况下就是开启！<br>  content = “address = no”    adress=no禁止跳转至地图！   adress=yes就开启了点击地址直接跳转至地图的功能,在默认是情况下就是开启！</p>
+</blockquote>
+<h4 id="Meta-http-equiv属性详解"><a href="#Meta-http-equiv属性详解" class="headerlink" title="Meta http-equiv属性详解"></a>Meta http-equiv属性详解</h4><blockquote>
+<p>http-equiv属性语法格式是：＜meta http-equiv=”参数” content=”参数变量值”＞ ；其中http-equiv属性主要有以下几种参数：<br>  Expires(期限)   : 可以用于设定网页的到期时间。一旦网页过期，必须到服务器上重新传输。<br>  Pragma(cache模式)  : 是用于设定禁止浏览器从本地机的缓存中调阅页面内容，设定后一旦离开网页就无法从Cache中再调出   注意：这样设定，访问者将无法脱机浏览。<br>  Refresh(刷新) :  自动刷新并指向新页面。  ＜meta http-equiv=”Refresh” content=”2；URL=<a href="http://www.net.cn/&quot;＞" target="_blank" rel="noopener">http://www.net.cn/&quot;＞</a>    ——–  其中的2是指停留2秒钟后自动刷新到URL网址。<br>  Set-Cookie(cookie设定)  : 如果网页过期，那么存盘的cookie将被删除 — ＜meta http-equiv=”Set-Cookie” content=”cookievalue=xxx;expires=Wednesday, 20-Jun-2007 22:33:00 GMT； path=/“＞  ———-必须使用GMT的时间格式。<br>  Window-target(显示窗口的设定)  : 强制页面在当前窗口以独立页面显示。<br>  content-Type(显示字符集的设定)  : 设定页面使用的字符集。<br>  清除缓存（再访问这个网站要重新下载！）  :  <meta http-equiv="cache-control" content="no-cache"><br>  关键字,给搜索引擎用的  :  <meta http-equiv="keywords" content="keyword1,keyword2,keyword3"><br>  页面描述  : <meta http-equiv="description" content="This is my page"></p>
+</blockquote>
+<h4 id="Meta中添加X-UA-Compatible和IE-Edge，chrome-1"><a href="#Meta中添加X-UA-Compatible和IE-Edge，chrome-1" class="headerlink" title="Meta中添加X-UA-Compatible和IE=Edge，chrome=1"></a>Meta中添加X-UA-Compatible和IE=Edge，chrome=1</h4><p>edge模式告诉浏览器以当前IE版本以最高级标准模式渲染，避免版本升级造成的影响  <meta http-equiv="X-UA-Compatible" content="IE=edge"><br>chrome = 1   强制 IE 使用 Chrome Frame 渲染   —–<meta http-equiv="X-UA-Compatible" content="chrome=1"></p>
+<h4 id="Meta标签中的apple-mobile-web-app-capable属性及含义"><a href="#Meta标签中的apple-mobile-web-app-capable属性及含义" class="headerlink" title="Meta标签中的apple-mobile-web-app-capable属性及含义"></a>Meta标签中的apple-mobile-web-app-capable属性及含义</h4><blockquote>
+<p>这meta的作用就是删除默认的苹果工具栏和菜单栏。  content有两个值”yes”和”no”,当我们需要显示工具栏和菜单栏时，这个行meta就不用加了，默认就是显示。<br>“apple-mobile-web-app-status-bar-style”作用是控制状态栏显示样式    —– 基本无用</p>
+</blockquote>
+<h4 id="transform的属性及其方法"><a href="#transform的属性及其方法" class="headerlink" title="transform的属性及其方法"></a>transform的属性及其方法</h4><p><img src="/images/image30.png"></p>
+<h4 id="对象遍历"><a href="#对象遍历" class="headerlink" title="对象遍历"></a>对象遍历</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(var key <span class="keyword">in</span> obj)&#123;&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="getElementBy-和querySelector"><a href="#getElementBy-和querySelector" class="headerlink" title="getElementBy..和querySelector"></a>getElementBy..和querySelector</h4><blockquote>
+<p>querySelector() 方法返回匹配指定 CSS 选择器元素的第一个子元素 。 该方法只返回匹配指定选择器的第一个元素。如果要返回所有匹配元素，需要使用 querySelectorAll() 方法替代．<br>  由于querySelector是按css规范来实现的，所以它传入的字符串中第一个字符不能是数字.<br>  最后再根据查询的资料总结一下：<br>  query选择符选出来的元素及元素数组是静态的，而getElement这种方法选出的元素是动态的。静态的就是说选出的所有元素的数组，不会随着文档操作而改变．<br>  在使用的时候getElement这种方法性能比较好，query选择符则比较方便．</p>
+</blockquote>
+<h4 id="flex-layout"><a href="#flex-layout" class="headerlink" title="flex layout"></a>flex layout</h4><blockquote>
+<p>链接：<a href="http://blog.csdn.net/sinat_24044741/article/details/51737606" target="_blank" rel="noopener">http://blog.csdn.net/sinat_24044741/article/details/51737606</a><br>  stretch:填充，扩展。</p>
+</blockquote>
+<h4 id="func-bind-sth"><a href="#func-bind-sth" class="headerlink" title="func.bind(sth)()"></a>func.bind(sth)()</h4><blockquote>
+<p>func.bind(sth)()，mozilla手册中提到bind是在ECMA-262 5th Edition中新增的一个特性，这里单独列出来作为一种调用方式是因为它弥补了直接调用中不能绑定作用域的缺陷。<br>  能绑定作用域</p>
+</blockquote>
+<h4 id="func-call"><a href="#func-call" class="headerlink" title="func.call()"></a>func.call()</h4><blockquote>
+<p>func.call()，这是第二种调用方式，<strong>每个方法的原型中都定义了call方法，用来执行当前方法</strong>。</p>
+</blockquote>
+<h4 id="func-apply"><a href="#func-apply" class="headerlink" title="func.apply()"></a>func.apply()</h4><blockquote>
+<p>call的双胞胎兄弟   关于this : apply()是函数对象的一个方法，它的作用是改变函数的调用对象，它的第一个参数就表示改变后的调用这个函数的对象。因此，this指的就是这第一个参数。</p>
+</blockquote>
+<h4 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h4><blockquote>
+<p>有权访问另一个函数作用域内变量的函数都是闭包</p>
+</blockquote>
+<h4 id="http请求的几种状态码"><a href="#http请求的几种状态码" class="headerlink" title="http请求的几种状态码"></a>http请求的几种状态码</h4><blockquote>
+<p>200：请求成功<br>  301：永久重定向<br>  302：临时重定向<br>  304：请求的内容没有修改过<br>  404：错误页面，不存在<br>  403：没有权限，拒绝访问<br>  500：服务器内部错误</p>
+</blockquote>
+<h4 id="ajax请求需要的参数"><a href="#ajax请求需要的参数" class="headerlink" title="ajax请求需要的参数"></a>ajax请求需要的参数</h4><blockquote>
+<p>type  : 请求的类型：GET / POST<br>  data ： 请求参数<br>  async  ： 是否异步<br>  datatype  ： 预期服务器返回的数据类型<br>  success  ： 请求成功后的回调函数<br>  url：请求地址</p>
+</blockquote>
+<h4 id="CSS中的伪类伪元素"><a href="#CSS中的伪类伪元素" class="headerlink" title="CSS中的伪类伪元素"></a>CSS中的伪类伪元素</h4><p><img src="/images/image52.png"></p>
+<h4 id="结构性伪类选择器"><a href="#结构性伪类选择器" class="headerlink" title="结构性伪类选择器"></a>结构性伪类选择器</h4><blockquote>
+<p>结构性伪类选择器</p>
+<ol>
+<li>四个最基本的：root、not、empty、target</li>
+<li>first-child、last-child、nth-child、nth-last-child、<br>nth-child(odd)、nth-child(even)、nth-last-child(odd)、nth-last-child(even)</li>
+<li>nth-of-type、nth-last-of-type</li>
+<li>循环使用样式</li>
+<li>only-child</li>
+</ol>
+</blockquote>
+<h4 id="H5-CSS3新增标签和属性"><a href="#H5-CSS3新增标签和属性" class="headerlink" title="H5   CSS3新增标签和属性"></a>H5   CSS3新增标签和属性</h4><p>链接：<a href="http://blog.csdn.net/qq_37811211/article/details/60880279" target="_blank" rel="noopener">http://blog.csdn.net/qq_37811211/article/details/60880279</a><br><a href="http://www.cnblogs.com/wuyanliang/p/5862643.html" target="_blank" rel="noopener">http://www.cnblogs.com/wuyanliang/p/5862643.html</a></p>
+<h4 id="怎么判断一个object为空"><a href="#怎么判断一个object为空" class="headerlink" title="怎么判断一个object为空"></a>怎么判断一个object为空</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(typeof(x) == <span class="string">"undefined"</span>) / <span class="keyword">if</span>(typeof(x) != <span class="string">"object"</span>)  / <span class="keyword">if</span>(!x)</span><br></pre></td></tr></table></figure>
+<h4 id="如何返回数组中元素的索引"><a href="#如何返回数组中元素的索引" class="headerlink" title="如何返回数组中元素的索引"></a>如何返回数组中元素的索引</h4><p>普通：arr.indexOf(x)<br>二分法：只能适用于有序数组，<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arr，num，midIndex. <span class="keyword">if</span>(arr[midIndex] &gt; num)&#123;midIndex-- ,<span class="keyword">if</span>(arr[midIndex] == num)&#123;<span class="keyword">return</span> midIndex&#125;<span class="keyword">else</span>&#123;midIdex++,<span class="keyword">if</span>(arr[midIndex] == num)&#123;<span class="keyword">return</span> midIndex&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="js原型继承的几种方式"><a href="#js原型继承的几种方式" class="headerlink" title="js原型继承的几种方式"></a>js原型继承的几种方式</h4><ol>
+<li>原型链继承<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function show()&#123;</span><br><span class="line">	this.name = <span class="string">'lee'</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function run()&#123;</span><br><span class="line">	this.age = <span class="number">20</span>;<span class="regexp">//run</span>继承了show，通过原型形成链条</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">run.prototype = new show();</span><br><span class="line">var run1 = new run();</span><br><span class="line">alert(run1.name);<span class="regexp">//lee</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>2，构造函数继承（对象冒充继承）//call,apply<br>为了解决引用共享和超类型无法传参的问题，我们采用一种叫借用构造函数的技术，或者成为<strong>对象冒充</strong>（伪造对象，经典继承）的技术来解决两种问题<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+<p>3，组合继承（原型链继承+构造函数继承）<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+<p>4，原型式继承<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">function obj(o)&#123;<span class="regexp">//</span>传递一个字面量函数</span><br><span class="line">	function F()&#123;&#125;/<span class="regexp">/创造一个构造函数</span></span><br><span class="line"><span class="regexp">	F.prototype = o;/</span><span class="regexp">/把字面量函数赋值给构造函数的原型</span></span><br><span class="line"><span class="regexp">	return new F(); /</span><span class="regexp">/最终犯坏实例化的构造函数</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">var box = &#123;/</span><span class="regexp">/字面量对象</span></span><br><span class="line"><span class="regexp">	name: 'lee',</span></span><br><span class="line"><span class="regexp">	arr: ['爸爸','妈妈','哥哥']</span></span><br><span class="line"><span class="regexp">&#125;;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">var box1 = obj(box);/</span><span class="regexp">/传递</span></span><br><span class="line"><span class="regexp">alert(box1.name);/</span><span class="regexp">/lee</span></span><br><span class="line"><span class="regexp">box1.name = 'jack';</span></span><br><span class="line"><span class="regexp">alert(box1.name);/</span><span class="regexp">/jack</span></span><br><span class="line"><span class="regexp">alert(box1.arr);/</span><span class="regexp">/'爸爸','妈妈','哥哥'</span></span><br><span class="line"><span class="regexp">box1.arr.push('姐姐');</span></span><br><span class="line"><span class="regexp">alert(box1.arr);'爸爸','妈妈','哥哥','姐姐'</span></span><br><span class="line"><span class="regexp">var box2 = obj(box);</span></span><br><span class="line"><span class="regexp">alert(box2.name);/</span><span class="regexp">/lee</span></span><br><span class="line"><span class="regexp">alert(box2.arr);/</span><span class="regexp">/'爸爸','妈妈','哥哥'</span></span><br></pre></td></tr></table></figure></p>
+<ol>
+<li>寄生组合式继承<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/02/23/CSS中居中的几种方式/" rel="next" title="CSS中居中的几种方式">
+                <i class="fa fa-chevron-left"></i> CSS中居中的几种方式
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/02/27/石磊个人简历/" rel="prev" title="石磊的个人简历">
+                石磊的个人简历 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2018/02/24/JS-CSS-DOM知识点/"
+     data-title="JS-CSS-DOM知识点"
+     data-content=""
+     data-url="http://yoursite.com/2018/02/24/JS-CSS-DOM知识点/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2018/02/24/JS-CSS-DOM知识点/"
+           data-title="JS-CSS-DOM知识点" data-url="http://yoursite.com/2018/02/24/JS-CSS-DOM知识点/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/headPic.JPG"
+               alt="Stone_Rivers" />
+          <p class="site-author-name" itemprop="name">Stone_Rivers</p>
+          <p class="site-description motion-element" itemprop="description">Pay it time & times!</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">22</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#当多个头部固定切下面可滑动（微策略点卖点买结算页面，头部接个组件固定）"><span class="nav-number">1.</span> <span class="nav-text">当多个头部固定切下面可滑动（微策略点卖点买结算页面，头部接个组件固定）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#p标签不可包裹div"><span class="nav-number">2.</span> <span class="nav-text">p标签不可包裹div</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#换行："><span class="nav-number">3.</span> <span class="nav-text">换行：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#背景图靠右一定距离"><span class="nav-number">4.</span> <span class="nav-text">背景图靠右一定距离</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#图片在div容器中会留白"><span class="nav-number">5.</span> <span class="nav-text">图片在div容器中会留白</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#背景有图和颜色"><span class="nav-number">6.</span> <span class="nav-text">背景有图和颜色</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#元素有个能为空而不占据高度"><span class="nav-number">7.</span> <span class="nav-text">元素有个能为空而不占据高度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#SVG-有预定义的形状元素"><span class="nav-number">8.</span> <span class="nav-text">SVG 有预定义的形状元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#svg描边问题"><span class="nav-number">9.</span> <span class="nav-text">svg描边问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#火狐浏览器标签问题"><span class="nav-number">10.</span> <span class="nav-text">火狐浏览器标签问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#微策略周-月K线图优化问题"><span class="nav-number">11.</span> <span class="nav-text">微策略周/月K线图优化问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#IE内核情况下标签的问题"><span class="nav-number">12.</span> <span class="nav-text">IE内核情况下标签的问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#网页被卷去高度各个语法"><span class="nav-number">13.</span> <span class="nav-text">网页被卷去高度各个语法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#viewBox-svg知识"><span class="nav-number">14.</span> <span class="nav-text">viewBox(svg知识)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#addEVentListener"><span class="nav-number">15.</span> <span class="nav-text">addEVentListener()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#useCapture"><span class="nav-number">16.</span> <span class="nav-text">useCapture</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#正则表达式"><span class="nav-number">17.</span> <span class="nav-text">正则表达式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#和-的区别"><span class="nav-number">18.</span> <span class="nav-text">== 和 === 的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#"><span class="nav-number">18.1.</span> <span class="nav-text">==</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#-1"><span class="nav-number">18.2.</span> <span class="nav-text">===</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#meta-viewport"><span class="nav-number">19.</span> <span class="nav-text">meta - viewport</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Mixin"><span class="nav-number">20.</span> <span class="nav-text">Mixin</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Meta标签中format-detection属性及含义"><span class="nav-number">21.</span> <span class="nav-text">Meta标签中format-detection属性及含义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Meta-http-equiv属性详解"><span class="nav-number">22.</span> <span class="nav-text">Meta http-equiv属性详解</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Meta中添加X-UA-Compatible和IE-Edge，chrome-1"><span class="nav-number">23.</span> <span class="nav-text">Meta中添加X-UA-Compatible和IE=Edge，chrome=1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Meta标签中的apple-mobile-web-app-capable属性及含义"><span class="nav-number">24.</span> <span class="nav-text">Meta标签中的apple-mobile-web-app-capable属性及含义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#transform的属性及其方法"><span class="nav-number">25.</span> <span class="nav-text">transform的属性及其方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#对象遍历"><span class="nav-number">26.</span> <span class="nav-text">对象遍历</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#getElementBy-和querySelector"><span class="nav-number">27.</span> <span class="nav-text">getElementBy..和querySelector</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#flex-layout"><span class="nav-number">28.</span> <span class="nav-text">flex layout</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#func-bind-sth"><span class="nav-number">29.</span> <span class="nav-text">func.bind(sth)()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#func-call"><span class="nav-number">30.</span> <span class="nav-text">func.call()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#func-apply"><span class="nav-number">31.</span> <span class="nav-text">func.apply()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#闭包"><span class="nav-number">32.</span> <span class="nav-text">闭包</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#http请求的几种状态码"><span class="nav-number">33.</span> <span class="nav-text">http请求的几种状态码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ajax请求需要的参数"><span class="nav-number">34.</span> <span class="nav-text">ajax请求需要的参数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CSS中的伪类伪元素"><span class="nav-number">35.</span> <span class="nav-text">CSS中的伪类伪元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#结构性伪类选择器"><span class="nav-number">36.</span> <span class="nav-text">结构性伪类选择器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#H5-CSS3新增标签和属性"><span class="nav-number">37.</span> <span class="nav-text">H5   CSS3新增标签和属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#怎么判断一个object为空"><span class="nav-number">38.</span> <span class="nav-text">怎么判断一个object为空</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如何返回数组中元素的索引"><span class="nav-number">39.</span> <span class="nav-text">如何返回数组中元素的索引</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#js原型继承的几种方式"><span class="nav-number">40.</span> <span class="nav-text">js原型继承的几种方式</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Stone_Rivers</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"wuhencut"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

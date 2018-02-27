@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="评论功能," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -84,20 +84,24 @@
 
 
 
-<meta name="description" content="插入图片与添加评论问题">
-<meta name="keywords" content="评论功能">
+<meta name="description" content="笔记 知识点">
 <meta property="og:type" content="article">
-<meta property="og:title" content="插入图片与添加评论问题">
-<meta property="og:url" content="http://yoursite.com/2016/08/04/插入图片与添加评论问题/index.html">
+<meta property="og:title" content="ES6知识点">
+<meta property="og:url" content="http://yoursite.com/2018/02/22/ES6知识点/index.html">
 <meta property="og:site_name" content="Stone_Rivers&#39;s Blog">
-<meta property="og:description" content="插入图片与添加评论问题">
+<meta property="og:description" content="笔记 知识点">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/images/duoshuoConfig.jpg">
-<meta property="og:updated_time" content="2016-08-22T08:03:26.514Z">
+<meta property="og:image" content="http://yoursite.com/images/letVSvar-1.png">
+<meta property="og:image" content="http://yoursite.com/images/letVSvar-2.png">
+<meta property="og:image" content="http://yoursite.com/images/image23.png">
+<meta property="og:image" content="http://yoursite.com/images/image24.png">
+<meta property="og:image" content="http://yoursite.com/images/image25.png">
+<meta property="og:image" content="http://yoursite.com/images/image26.png">
+<meta property="og:updated_time" content="2018-02-27T05:00:13.318Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="插入图片与添加评论问题">
-<meta name="twitter:description" content="插入图片与添加评论问题">
-<meta name="twitter:image" content="http://yoursite.com/images/duoshuoConfig.jpg">
+<meta name="twitter:title" content="ES6知识点">
+<meta name="twitter:description" content="笔记 知识点">
+<meta name="twitter:image" content="http://yoursite.com/images/letVSvar-1.png">
 
 
 
@@ -118,9 +122,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/08/04/插入图片与添加评论问题/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/02/22/ES6知识点/"/>
 
-  <title> 插入图片与添加评论问题 | Stone_Rivers's Blog </title>
+  <title> ES6知识点 | Stone_Rivers's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -250,7 +254,7 @@
             
             
               
-                插入图片与添加评论问题
+                ES6知识点
               
             
           </h1>
@@ -262,8 +266,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-04T17:36:46+08:00" content="2016-08-04">
-              2016-08-04
+            <time itemprop="dateCreated" datetime="2018-02-22T14:31:12+08:00" content="2018-02-22">
+              2018-02-22
             </time>
           </span>
 
@@ -276,8 +280,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/技术日志/" itemprop="url" rel="index">
-                    <span itemprop="name">技术日志</span>
+                  <a href="/categories/笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">笔记</span>
                   </a>
                 </span>
 
@@ -292,8 +296,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/08/04/插入图片与添加评论问题/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/04/插入图片与添加评论问题/" itemprop="commentsCount"></span>
+                <a href="/2018/02/22/ES6知识点/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/02/22/ES6知识点/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -316,12 +320,56 @@
       
 
       
-        <h2 id="添加图片和评论功能时遇到的问题"><a href="#添加图片和评论功能时遇到的问题" class="headerlink" title="添加图片和评论功能时遇到的问题"></a>添加图片和评论功能时遇到的问题</h2><h3 id="添加图片："><a href="#添加图片：" class="headerlink" title="添加图片："></a>添加图片：</h3><p>引用方式：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![](https://...)</span><br></pre></td></tr></table></figure></p>
-<p>引用本地：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![](/images/pic.png)</span><br></pre></td></tr></table></figure></p>
-<p>注意：在images前必须要有/不然引用失败！</p>
-<h3 id="添加多说评论功能"><a href="#添加多说评论功能" class="headerlink" title="添加多说评论功能"></a>添加多说评论功能</h3><p>多说是一个开源的，提供分享到社交平台并提供给使用者管理评论内容的这么一个插件，说实话很好用，配上我blog的mau主题显得很不错;<br>添加方法：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">在多说上申请自己的账号和域名后;</span><br><span class="line">在主题的config.yml文件的duoshuo:栏中加上自己域名简称就行;</span><br><span class="line">用多说的unstable版本，原因：最新稳定版会导致分享显示的社交平台为undefined;</span><br></pre></td></tr></table></figure></p>
-<p>不明白的话可以看下图<br><img src="/images/duoshuoConfig.jpg" alt=""></p>
-<h3 id="写页面的时候遇到的层级写错导致的页面错乱问题"><a href="#写页面的时候遇到的层级写错导致的页面错乱问题" class="headerlink" title="写页面的时候遇到的层级写错导致的页面错乱问题"></a>写页面的时候遇到的层级写错导致的页面错乱问题</h3><p>在点卖页面有三个弹窗：点卖当前策略、点卖所有策略、设置止盈止损，本来么没什么大问题的，我觉得结算页面的体验不好，因为上头的导航栏不是固定死的，如果用户滑到很下面，要看点卖页面岂不是要重新滑到头部才能看<a href="http://ycl.yztz.com" target="_blank" rel="noopener">赢策略</a>（只支持手机端，如果你用电脑端pc模式看的话我可不管你的眼睛了）<br>然后嘛，设置头fixed,然后上下距离啥的就不多说了，出现问题了！前面一个多月！20多号人都没发现的问题！弹窗后居然还可以点上面的切换交易品种栏。- -当时就被强哥骂了一顿，还好老子脸皮厚；弹窗灰度背景直接飞到10000，弹窗10001；bingo！</p>
+        <h4 id="let与var的区别"><a href="#let与var的区别" class="headerlink" title="let与var的区别"></a>let与var的区别</h4><p><img src="/images/letVSvar-1.png"><br><img src="/images/letVSvar-2.png"></p>
+<h4 id="Promise"><a href="#Promise" class="headerlink" title="Promise"></a>Promise</h4><blockquote>
+<p>Promise 的主要作用就是用于封装异步操作，以便根据异步操作是否成功来进行后续的操作。</p>
+</blockquote>
+<p>  后续操作是通过 then() 和 catch() 来申明的，但是如何触发，以及应该触发成功还是失败呢？这就靠 resolve 和 reject 这两个函数了，在 Promise 对象产生时，它们是为作封装的函数的参数的</p>
+<h4 id="node"><a href="#node" class="headerlink" title="node"></a>node</h4><blockquote>
+<p>var path = require(‘path’);</p>
+</blockquote>
+<h5 id="path-resolve"><a href="#path-resolve" class="headerlink" title="path.resolve"></a>path.resolve</h5><p><img src="/images/image23.png"></p>
+<blockquote>
+<p>相当于CD，看不懂看 <a href="http://www.tuicool.com/articles/3qia6zz" target="_blank" rel="noopener">链接</a></p>
+</blockquote>
+<h5 id="path-isAbsolute-path"><a href="#path-isAbsolute-path" class="headerlink" title="path.isAbsolute(path)"></a>path.isAbsolute(path)</h5><blockquote>
+<p>判断 path 是否绝对路径。这块可以理解为，path 是否真的是一个绝对路径（比如 ‘E:/abc’），或者是以“/”开头的路径，二者都会返回true：</p>
+</blockquote>
+<h5 id="path-dirname-p"><a href="#path-dirname-p" class="headerlink" title="path.dirname(p)"></a>path.dirname(p)</h5><blockquote>
+<p>返回路径中文件夹的路径<br><img src="/images/image24.png"></p>
+</blockquote>
+<h5 id="path-basename-p-ext"><a href="#path-basename-p-ext" class="headerlink" title="path.basename(p, [ext])"></a>path.basename(p, [ext])</h5><blockquote>
+<p>返回路径中的最后一部分，类似于Unix 的 basename 命令。 ext 为需要截掉的尾缀内容</p>
+</blockquote>
+<h5 id="path-extname-p"><a href="#path-extname-p" class="headerlink" title="path.extname(p)"></a>path.extname(p)</h5><blockquote>
+<p>返回路径文件中的扩展名（若存在）</p>
+</blockquote>
+<h5 id="path-sep"><a href="#path-sep" class="headerlink" title="path.sep"></a>path.sep</h5><p>返回对应平台下的文件夹分隔符，win下为’\’，*nix下为’/‘<br><img src="/images/image25.png"></p>
+<h5 id="path-delimiter"><a href="#path-delimiter" class="headerlink" title="path.delimiter"></a>path.delimiter</h5><blockquote>
+<p>返回对应平台下的路径分隔符，win下为’;’，*nix下为’:’<br><img src="/images/image26.png"></p>
+</blockquote>
+<h5 id="require-ecports-module-ecports"><a href="#require-ecports-module-ecports" class="headerlink" title="require ecports module.ecports"></a>require ecports module.ecports</h5><blockquote>
+<p>require 用来加载代码，而 exports 和 module.exports 则用来导出代码。<br>1、module.exports 初始值为一个空对象 {}<br>2、exports 是指向的 module.exports 的引用<br>3、require() 返回的是 module.exports 而不是 exports</p>
+</blockquote>
+<h5 id="exports-与-module-exports"><a href="#exports-与-module-exports" class="headerlink" title="exports 与 module.exports"></a>exports 与 module.exports</h5><p><a href="https://cnodejs.org/topic/5231a630101e574521e45ef8" target="_blank" rel="noopener">https://cnodejs.org/topic/5231a630101e574521e45ef8</a><br><a href="https://cnodejs.org/topic/52308842101e574521c16e06" target="_blank" rel="noopener">https://cnodejs.org/topic/52308842101e574521c16e06</a></p>
+<blockquote>
+<p>1.module.exports 初始值为一个空对象 {}<br>  2.exports 是指向的 module.exports 的引用<br>  3.require() 返回的是 module.exports 而不是 exports</p>
+</blockquote>
+<h5 id="filename"><a href="#filename" class="headerlink" title="__filename"></a>__filename</h5><blockquote>
+<p>Node.js中，在任何模块文件内部，可以使用__filename变量获取当前模块文件的带有完整绝对路径的文件名。</p>
+</blockquote>
+<h5 id="dirname"><a href="#dirname" class="headerlink" title="__dirname"></a>__dirname</h5><blockquote>
+<p>获得当前文件所在目录的完整目录名</p>
+</blockquote>
+<h4 id="key"><a href="#key" class="headerlink" title="key"></a>key</h4><blockquote>
+<p>当你不需要想某个模块进行复用(input)而需要重新渲染，可在元素内(<input placeholder="Enter your email address" key="email-input">)<br>  添加key值</p>
+</blockquote>
+<h4 id="slice"><a href="#slice" class="headerlink" title="slice"></a>slice</h4><blockquote>
+<p>slice() 方法返回一个从开始到结束（不包括结束）选择的数组的一部分浅拷贝到一个新数组对象。原始数组不会被修改</p>
+</blockquote>
+<h4 id="splice"><a href="#splice" class="headerlink" title="splice"></a>splice</h4><blockquote>
+<p>splice() 方法通过删除现有元素和/或添加新元素来更改一个数组的内容。  会修改调用的数组</p>
+</blockquote>
 
       
     </div>
@@ -342,27 +390,21 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/评论功能/" rel="tag">#评论功能</a>
-          
-        </div>
-      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/08/01/stone-s-first-own-blog/" rel="next" title="stone's first own blog">
-                <i class="fa fa-chevron-left"></i> stone's first own blog
+              <a href="/2018/02/22/Vue知识点/" rel="next" title="Vue知识点">
+                <i class="fa fa-chevron-left"></i> Vue知识点
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/08/11/前端入门学习计划/" rel="prev" title="前端入门学习计划">
-                前端入门学习计划 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/02/22/hexo知识点/" rel="prev" title="hexo知识点">
+                hexo知识点 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -378,10 +420,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/08/04/插入图片与添加评论问题/"
-     data-title="插入图片与添加评论问题"
+        <div class="ds-share flat" data-thread-key="2018/02/22/ES6知识点/"
+     data-title="ES6知识点"
      data-content=""
-     data-url="http://yoursite.com/2016/08/04/插入图片与添加评论问题/">
+     data-url="http://yoursite.com/2018/02/22/ES6知识点/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -408,8 +450,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/08/04/插入图片与添加评论问题/"
-           data-title="插入图片与添加评论问题" data-url="http://yoursite.com/2016/08/04/插入图片与添加评论问题/">
+      <div class="ds-thread" data-thread-key="2018/02/22/ES6知识点/"
+           data-title="ES6知识点" data-url="http://yoursite.com/2018/02/22/ES6知识点/">
       </div>
     
   </div>
@@ -500,7 +542,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#添加图片和评论功能时遇到的问题"><span class="nav-number">1.</span> <span class="nav-text">添加图片和评论功能时遇到的问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#添加图片："><span class="nav-number">1.1.</span> <span class="nav-text">添加图片：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加多说评论功能"><span class="nav-number">1.2.</span> <span class="nav-text">添加多说评论功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#写页面的时候遇到的层级写错导致的页面错乱问题"><span class="nav-number">1.3.</span> <span class="nav-text">写页面的时候遇到的层级写错导致的页面错乱问题</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#let与var的区别"><span class="nav-number">1.</span> <span class="nav-text">let与var的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Promise"><span class="nav-number">2.</span> <span class="nav-text">Promise</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#node"><span class="nav-number">3.</span> <span class="nav-text">node</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#path-resolve"><span class="nav-number">3.1.</span> <span class="nav-text">path.resolve</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#path-isAbsolute-path"><span class="nav-number">3.2.</span> <span class="nav-text">path.isAbsolute(path)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#path-dirname-p"><span class="nav-number">3.3.</span> <span class="nav-text">path.dirname(p)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#path-basename-p-ext"><span class="nav-number">3.4.</span> <span class="nav-text">path.basename(p, [ext])</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#path-extname-p"><span class="nav-number">3.5.</span> <span class="nav-text">path.extname(p)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#path-sep"><span class="nav-number">3.6.</span> <span class="nav-text">path.sep</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#path-delimiter"><span class="nav-number">3.7.</span> <span class="nav-text">path.delimiter</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#require-ecports-module-ecports"><span class="nav-number">3.8.</span> <span class="nav-text">require ecports module.ecports</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#exports-与-module-exports"><span class="nav-number">3.9.</span> <span class="nav-text">exports 与 module.exports</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#filename"><span class="nav-number">3.10.</span> <span class="nav-text">__filename</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#dirname"><span class="nav-number">3.11.</span> <span class="nav-text">__dirname</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#key"><span class="nav-number">4.</span> <span class="nav-text">key</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#slice"><span class="nav-number">5.</span> <span class="nav-text">slice</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#splice"><span class="nav-number">6.</span> <span class="nav-text">splice</span></a></li></ol></div>
             
           </div>
         </section>
