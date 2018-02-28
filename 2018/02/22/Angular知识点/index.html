@@ -92,7 +92,7 @@
 <meta property="og:description" content="笔记 知识点">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/images/image19.png">
-<meta property="og:updated_time" content="2018-02-28T03:25:08.204Z">
+<meta property="og:updated_time" content="2018-02-28T16:10:18.133Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Angular知识点">
 <meta name="twitter:description" content="笔记 知识点">
@@ -349,6 +349,9 @@
 <h4 id="angular如何设置cookie"><a href="#angular如何设置cookie" class="headerlink" title="angular如何设置cookie"></a>angular如何设置cookie</h4><blockquote>
 <p>angular有两种设置cookie的方式：$cookies和$cookieStore，设置方式：$cookies.put(name , value), 取值：get(),删除：remove()；<br>  差别：$cookies对name设置字符串属性的值，$cookieStore能对name设置对象，字符串，数组形势的值。<br>  $cookies可以对cookie设置过期时间，另一个不可以  具体资料链接：<a href="http://www.cnblogs.com/yangmin01/p/5973883.html" target="_blank" rel="noopener">http://www.cnblogs.com/yangmin01/p/5973883.html</a><br>  var expireDate = new Date();<br>  expireDate.setDate(expireDate.getDate() + 1);<br>  $cookies.put(“userName”,“yangmin”,{‘expires’: expireDate});//“userName”一天后过期</p>
 </blockquote>
+<h4 id="指令可以异步获取数据并显示"><a href="#指令可以异步获取数据并显示" class="headerlink" title="指令可以异步获取数据并显示"></a>指令可以异步获取数据并显示</h4><blockquote>
+<p>详情看微策略4.0版本的cldt指令代码，通用于各个点买一级页面需要用到的模块</p>
+</blockquote>
 
       
     </div>
@@ -475,7 +478,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">23</span>
+              <span class="site-state-item-count">24</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -521,7 +524,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#指令模板：template，回调函数：link-在link中可执行请求，请求的服务写在最外层，看图"><span class="nav-number">1.</span> <span class="nav-text">指令模板：template，回调函数：link.在link中可执行请求，请求的服务写在最外层，看图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#angular自带的9种过滤器"><span class="nav-number">2.</span> <span class="nav-text">angular自带的9种过滤器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ng-class"><span class="nav-number">3.</span> <span class="nav-text">ng-class</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ng-bind"><span class="nav-number">4.</span> <span class="nav-text">ng-bind</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#goURL问题"><span class="nav-number">5.</span> <span class="nav-text">goURL问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ng-repeat遍历如何在子列表中展示数据"><span class="nav-number">6.</span> <span class="nav-text">ng-repeat遍历如何在子列表中展示数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#原生js导致操作不受-scope控制"><span class="nav-number">7.</span> <span class="nav-text">原生js导致操作不受$scope控制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#T-1买断多个弹窗，当提醒弹窗到买断信息弹窗出现一闪"><span class="nav-number">8.</span> <span class="nav-text">T+1买断多个弹窗，当提醒弹窗到买断信息弹窗出现一闪</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#watch"><span class="nav-number">9.</span> <span class="nav-text">$watch</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#digest"><span class="nav-number">10.</span> <span class="nav-text">$digest</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#angualr脏检查"><span class="nav-number">11.</span> <span class="nav-text">angualr脏检查</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#图片验证码防止被刷接口"><span class="nav-number">12.</span> <span class="nav-text">图片验证码防止被刷接口</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#图片验证码如何刷新"><span class="nav-number">13.</span> <span class="nav-text">图片验证码如何刷新</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#给鑫谷做一个分包"><span class="nav-number">14.</span> <span class="nav-text">给鑫谷做一个分包</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#angular如何设置cookie"><span class="nav-number">15.</span> <span class="nav-text">angular如何设置cookie</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#指令模板：template，回调函数：link-在link中可执行请求，请求的服务写在最外层，看图"><span class="nav-number">1.</span> <span class="nav-text">指令模板：template，回调函数：link.在link中可执行请求，请求的服务写在最外层，看图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#angular自带的9种过滤器"><span class="nav-number">2.</span> <span class="nav-text">angular自带的9种过滤器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ng-class"><span class="nav-number">3.</span> <span class="nav-text">ng-class</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ng-bind"><span class="nav-number">4.</span> <span class="nav-text">ng-bind</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#goURL问题"><span class="nav-number">5.</span> <span class="nav-text">goURL问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ng-repeat遍历如何在子列表中展示数据"><span class="nav-number">6.</span> <span class="nav-text">ng-repeat遍历如何在子列表中展示数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#原生js导致操作不受-scope控制"><span class="nav-number">7.</span> <span class="nav-text">原生js导致操作不受$scope控制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#T-1买断多个弹窗，当提醒弹窗到买断信息弹窗出现一闪"><span class="nav-number">8.</span> <span class="nav-text">T+1买断多个弹窗，当提醒弹窗到买断信息弹窗出现一闪</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#watch"><span class="nav-number">9.</span> <span class="nav-text">$watch</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#digest"><span class="nav-number">10.</span> <span class="nav-text">$digest</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#angualr脏检查"><span class="nav-number">11.</span> <span class="nav-text">angualr脏检查</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#图片验证码防止被刷接口"><span class="nav-number">12.</span> <span class="nav-text">图片验证码防止被刷接口</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#图片验证码如何刷新"><span class="nav-number">13.</span> <span class="nav-text">图片验证码如何刷新</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#给鑫谷做一个分包"><span class="nav-number">14.</span> <span class="nav-text">给鑫谷做一个分包</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#angular如何设置cookie"><span class="nav-number">15.</span> <span class="nav-text">angular如何设置cookie</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#指令可以异步获取数据并显示"><span class="nav-number">16.</span> <span class="nav-text">指令可以异步获取数据并显示</span></a></li></ol></div>
             
           </div>
         </section>
