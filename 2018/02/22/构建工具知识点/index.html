@@ -92,7 +92,10 @@
 <meta property="og:description" content="笔记 知识点">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/images/image21.png">
-<meta property="og:updated_time" content="2018-02-22T08:10:40.148Z">
+<meta property="og:image" content="http://yoursite.com/images/image63.png">
+<meta property="og:image" content="http://yoursite.com/images/image64.png">
+<meta property="og:image" content="http://yoursite.com/images/image65.png">
+<meta property="og:updated_time" content="2018-02-28T07:37:35.539Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="构建工具知识点">
 <meta name="twitter:description" content="笔记 知识点">
@@ -344,6 +347,50 @@
 <h4 id="编译scss"><a href="#编译scss" class="headerlink" title="编译scss"></a>编译scss</h4><blockquote>
 <p>下载ruby最近版本 - 安装 - 设置编辑器file watcher - Program 地址：安装目录ruby/ bat / scss.bat</p>
 </blockquote>
+<h4 id="nginx跨域"><a href="#nginx跨域" class="headerlink" title="nginx跨域"></a>nginx跨域</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">listen：监听的端口，数据交互的端口。</span><br><span class="line">location /  --- 所有以/开头的地址，实际上是所有请求</span><br><span class="line">root  html   ---- 去请求../html文件夹里的文件,其中..的路径在nginx里面有定义，安装的时候会有默认路径</span><br><span class="line">index  index.html index.htm  ＃首页响应地址</span><br></pre></td></tr></table></figure>
+<h4 id="什么是反向代理"><a href="#什么是反向代理" class="headerlink" title="什么是反向代理"></a>什么是反向代理</h4><blockquote>
+<p>通常的代理服务器，只用于代理内部网络对Internet的连接请求，客户机必须指定代理服务器,并将本来要直接发送到Web服务器上的http请求发送到代理服务器中。由于外部网络上的主机并不会配置并使用这个代理服务器，普通代理服务器也被设计为在Internet上搜寻多个不确定的服务器,而不是针对Internet上多个客户机的请求访问某一个固定的服务器，因此普通的Web代理服务器不支持外部对内部网络的访问请求。当一个代理服务器能够代理外部网络上的主机，访问内部网络时，这种代理服务的方式称为反向代理服务。此时代理服务器对外就表现为一个Web服务器，外部网络就可以简单把它当作一个标准的Web服务器而不需要特定的配置。不同之处在于，这个服务器没有保存任何网页的真实数据，所有的静态网页或者CGI程序，都保存在内部的Web服务器上。因此对反向代理服务器的攻击并不会使得网页信息遭到破坏，这样就增强了Web服务器的安全性。<br>  <a href="https://baike.baidu.com/item/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/7793488?fr=aladdin" target="_blank" rel="noopener">https://baike.baidu.com/item/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/7793488?fr=aladdin</a><br>  <a href="https://www.zhihu.com/question/24723688" target="_blank" rel="noopener">https://www.zhihu.com/question/24723688</a><br>  nginx启动后，我在代理连接写好后，nginx服务是直接可以请求某个域名的某个链接的数据的<br>  所以是只有js这一种语言存在跨域问题，服务器和服务器之间通信的话可以直接拿数据，是这个意思么。那我如果知道我想要某个接口的数据，我知道这个请求地址，我用java语言的话，我可以直接拿到数据啦<br>  因为我nginx搭建的代理服务器跟我的本地项目在统一个IP，所以可以把nginx收到的数据传给我本地node启动的</p>
+</blockquote>
+<h4 id="yarn"><a href="#yarn" class="headerlink" title="yarn"></a>yarn</h4><blockquote>
+<p>facebook推出的类似npm的包管理工具<br>  yarn的=包管理效率比npm更高（安装） 指令更简单化  npm install  === yarn</p>
+</blockquote>
+<p>   <a href="http://www.jianshu.com/p/d2f88722aef9" target="_blank" rel="noopener">http://www.jianshu.com/p/d2f88722aef9</a></p>
+<h4 id="brosersync"><a href="#brosersync" class="headerlink" title="brosersync"></a>brosersync</h4><blockquote>
+<p>浏览器自动刷新用，代码修改保存后，页面自动刷新以展示效果。webpack有实现了类似的功能。  webpack -dev–server</p>
+</blockquote>
+<h4 id="karma"><a href="#karma" class="headerlink" title="karma"></a>karma</h4><blockquote>
+<p>Karma侧重于单元测试（也可以做端对端测试，只是远没有Protractor好用，上面的文字就是摘自Karma官网）， Protractor侧重于端对端测试。两个最好不要用在一起，明显职责划分都不一样。具体原因请看：testing - Can Protractor and Karma be used together?</p>
+</blockquote>
+<h4 id="vendor-js"><a href="#vendor-js" class="headerlink" title="vendor.js"></a>vendor.js</h4><blockquote>
+<p>webpack将项目依赖的第三方压缩成一个独立的包，并用hash值跟踪，当有内容变动的时候才会更新。</p>
+</blockquote>
+<h4 id="path-resolve-绝对路径"><a href="#path-resolve-绝对路径" class="headerlink" title="path.resolve 绝对路径"></a>path.resolve 绝对路径</h4><p><img src="/images/image63.png"></p>
+<blockquote>
+<p>相当于cd命令</p>
+</blockquote>
+<h4 id="node-js-dirname变量"><a href="#node-js-dirname变量" class="headerlink" title="node.js: __dirname变量"></a>node.js: __dirname变量</h4><blockquote>
+<p>在任何模块文件内部，可以使用__dirname变量获取当前模块文件所在目录的完整绝对路径。</p>
+</blockquote>
+<h4 id="path-join"><a href="#path-join" class="headerlink" title="path.join()"></a>path.join()</h4><blockquote>
+<p>path.join(a,b,c)      ——— a/b/c</p>
+</blockquote>
+<h4 id="html-webpack-plugin"><a href="#html-webpack-plugin" class="headerlink" title="html-webpack-plugin"></a>html-webpack-plugin</h4><blockquote>
+<p>为html文件中引入的外部资源如script、link动态添加每次compile后的hash，防止引用缓存的外部文件问题<br>  可以生成创建html入口文件，比如单页面可以生成一个html文件入口，配置N个html-webpack-plugin可以生成N个页面入口</p>
+</blockquote>
+<h4 id="webpack-DefinePlugin"><a href="#webpack-DefinePlugin" class="headerlink" title="webpack.DefinePlugin"></a>webpack.DefinePlugin</h4><blockquote>
+<p>通过配置了DefinePlugin，那么这里面的标识就相当于全局变量，你的业务代码可以直接使用配置的标识</p>
+</blockquote>
+<p><img src="/images/image64.png"></p>
+<h4 id="webpack为模板的项目结构"><a href="#webpack为模板的项目结构" class="headerlink" title="webpack为模板的项目结构"></a>webpack为模板的项目结构</h4><p><img src="/images/image65.png"></p>
+<h4 id="npm-ren-dev"><a href="#npm-ren-dev" class="headerlink" title="npm ren dev"></a>npm ren dev</h4><blockquote>
+<p>不可以有&gt;=2的空行</p>
+</blockquote>
+<h4 id="代码规则loader-eslint太严格"><a href="#代码规则loader-eslint太严格" class="headerlink" title="代码规则loader:eslint太严格"></a>代码规则loader:eslint太严格</h4><blockquote>
+<p>对开发造成一定困扰，如何删除：在webpack.base.config.js中删除关于eslint的部分即可</p>
+</blockquote>
+<h4 id="如何将node-modules不被wenstorm解析加载（indexing）"><a href="#如何将node-modules不被wenstorm解析加载（indexing）" class="headerlink" title="如何将node_modules不被wenstorm解析加载（indexing）"></a>如何将node_modules不被wenstorm解析加载（indexing）</h4><blockquote>
+<p>方法1：右键node_modules — Mark as exluded此方法有时候不灵验<br>  方法2：打开设置 — Editor — File Types —Ignore files and folders — 添加node_nodules;  此方法适用于所有项目。不能针对某个项目</p>
+</blockquote>
 
       
     </div>
@@ -516,7 +563,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#pm2守护进程"><span class="nav-number">1.</span> <span class="nav-text">pm2守护进程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#webpack"><span class="nav-number">2.</span> <span class="nav-text">webpack</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CSS-loader前缀问题"><span class="nav-number">3.</span> <span class="nav-text">CSS loader前缀问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#webpack遇到的问题"><span class="nav-number">4.</span> <span class="nav-text">webpack遇到的问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#webpack-dev-server"><span class="nav-number">5.</span> <span class="nav-text">webpack-dev-server</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Xshell和Xftp使用"><span class="nav-number">6.</span> <span class="nav-text">Xshell和Xftp使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#–save-dev的作用"><span class="nav-number">7.</span> <span class="nav-text">–save-dev的作用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#grunt-contrib-copy"><span class="nav-number">8.</span> <span class="nav-text">grunt-contrib-copy</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#grunt-contrib-concat"><span class="nav-number">9.</span> <span class="nav-text">grunt-contrib-concat</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#grunt-contrib-uglify"><span class="nav-number">10.</span> <span class="nav-text">grunt-contrib-uglify</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#编译scss"><span class="nav-number">11.</span> <span class="nav-text">编译scss</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#pm2守护进程"><span class="nav-number">1.</span> <span class="nav-text">pm2守护进程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#webpack"><span class="nav-number">2.</span> <span class="nav-text">webpack</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CSS-loader前缀问题"><span class="nav-number">3.</span> <span class="nav-text">CSS loader前缀问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#webpack遇到的问题"><span class="nav-number">4.</span> <span class="nav-text">webpack遇到的问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#webpack-dev-server"><span class="nav-number">5.</span> <span class="nav-text">webpack-dev-server</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Xshell和Xftp使用"><span class="nav-number">6.</span> <span class="nav-text">Xshell和Xftp使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#–save-dev的作用"><span class="nav-number">7.</span> <span class="nav-text">–save-dev的作用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#grunt-contrib-copy"><span class="nav-number">8.</span> <span class="nav-text">grunt-contrib-copy</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#grunt-contrib-concat"><span class="nav-number">9.</span> <span class="nav-text">grunt-contrib-concat</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#grunt-contrib-uglify"><span class="nav-number">10.</span> <span class="nav-text">grunt-contrib-uglify</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#编译scss"><span class="nav-number">11.</span> <span class="nav-text">编译scss</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#nginx跨域"><span class="nav-number">12.</span> <span class="nav-text">nginx跨域</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#什么是反向代理"><span class="nav-number">13.</span> <span class="nav-text">什么是反向代理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#yarn"><span class="nav-number">14.</span> <span class="nav-text">yarn</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#brosersync"><span class="nav-number">15.</span> <span class="nav-text">brosersync</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#karma"><span class="nav-number">16.</span> <span class="nav-text">karma</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#vendor-js"><span class="nav-number">17.</span> <span class="nav-text">vendor.js</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#path-resolve-绝对路径"><span class="nav-number">18.</span> <span class="nav-text">path.resolve 绝对路径</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#node-js-dirname变量"><span class="nav-number">19.</span> <span class="nav-text">node.js: __dirname变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#path-join"><span class="nav-number">20.</span> <span class="nav-text">path.join()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#html-webpack-plugin"><span class="nav-number">21.</span> <span class="nav-text">html-webpack-plugin</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#webpack-DefinePlugin"><span class="nav-number">22.</span> <span class="nav-text">webpack.DefinePlugin</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#webpack为模板的项目结构"><span class="nav-number">23.</span> <span class="nav-text">webpack为模板的项目结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#npm-ren-dev"><span class="nav-number">24.</span> <span class="nav-text">npm ren dev</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码规则loader-eslint太严格"><span class="nav-number">25.</span> <span class="nav-text">代码规则loader:eslint太严格</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如何将node-modules不被wenstorm解析加载（indexing）"><span class="nav-number">26.</span> <span class="nav-text">如何将node_modules不被wenstorm解析加载（indexing）</span></a></li></ol></div>
             
           </div>
         </section>

@@ -92,7 +92,7 @@
 <meta property="og:description" content="笔记 知识点">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/images/image19.png">
-<meta property="og:updated_time" content="2018-02-27T04:56:58.604Z">
+<meta property="og:updated_time" content="2018-02-28T03:25:08.204Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Angular知识点">
 <meta name="twitter:description" content="笔记 知识点">
@@ -324,6 +324,31 @@
 <p>当goURL页面本身带参数，而且该页面需要登录。页面数据又根据?的参数来获取，会导致?goURL=<strong><em>?</em></strong>、第二个?后重要的参数会被抹去不见。解决：1、goURL跳转登录的时候自己写清楚，2、ctrl里写清楚，当参数不穿的时候默认是什么值。</p>
 </blockquote>
 <h4 id="ng-repeat遍历如何在子列表中展示数据"><a href="#ng-repeat遍历如何在子列表中展示数据" class="headerlink" title="ng-repeat遍历如何在子列表中展示数据"></a>ng-repeat遍历如何在子列表中展示数据</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ng-repeat=<span class="string">"item in items"</span>,     exm : &lt;ul ng-repeat=<span class="string">"item in items"</span>&gt;&lt;li&gt;&#123;&#123;item.data&#125;&#125;&lt;<span class="regexp">/li&gt;&lt;/ul</span>&gt;  其中的item可用this代替，因为this指向item(双向绑定)</span><br></pre></td></tr></table></figure>
+<h4 id="原生js导致操作不受-scope控制"><a href="#原生js导致操作不受-scope控制" class="headerlink" title="原生js导致操作不受$scope控制"></a>原生js导致操作不受$scope控制</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">由于弹窗的组件都是由原生js写的，会导致操作跳出$scope作用域，操作不收控制</span><br><span class="line">解决<span class="symbol">:</span>将操作绑定回$scope,</span><br><span class="line">$scope.$apply(function()&#123;</span><br><span class="line">      ************</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h4 id="T-1买断多个弹窗，当提醒弹窗到买断信息弹窗出现一闪"><a href="#T-1买断多个弹窗，当提醒弹窗到买断信息弹窗出现一闪" class="headerlink" title="T+1买断多个弹窗，当提醒弹窗到买断信息弹窗出现一闪"></a>T+1买断多个弹窗，当提醒弹窗到买断信息弹窗出现一闪</h4><blockquote>
+<p>由于第一个弹窗结束，背景消失，第二个弹窗出现，背景也出现，所以导致一闪，<br>  解决：在一个个弹窗结束的“确定操作”用，设置背景为true，就不消失，不会闪了。</p>
+</blockquote>
+<h4 id="watch"><a href="#watch" class="headerlink" title="$watch"></a>$watch</h4><blockquote>
+<p>它接受两个函数作参数，把它们存储在$$watchers数组中。我们需要在每个Scope实例上存储这些函数，所以要把它放在Scope的原型上</p>
+</blockquote>
+<h4 id="digest"><a href="#digest" class="headerlink" title="$digest"></a>$digest</h4><blockquote>
+<p>它执行了所有在作用域上注册过的监听器。我们来实现一个它的简化版，遍历所有监听器，调用它们的监听函数</p>
+</blockquote>
+<h4 id="angualr脏检查"><a href="#angualr脏检查" class="headerlink" title="angualr脏检查"></a>angualr脏检查</h4><blockquote>
+<p>浏览器有提供用户触发时间的API如click,change等等，但是内存-&gt;用户，浏览器没有提供数据监测的API，所以任何内存数据变动(定时，异步请求，时间出发等等)都无法被监听。自然也没有办法处理callback。但是我们给予这些大部分能产生出具变动的时间进行封装(click，mouse-over，time-out)，在每次时间发生后，执行完时间后检查一遍数据的变化，如果数据和上次的值有变化，则执行这个值(注册时)对应的callback(框架中)，这个callback可能是view层的一个数据表现，也可能是一段处理的function。在检查数据变化的时候由于你并不知道这个事件对那些数据进行了更改，所以必须进行一次大检查，将所有”注册”过的值全都检查一遍，一次检查称为一个周期，每次至少检查两遍，因为第二遍用来确认，前一遍的变动中是否有数据的变动，导致了其他数据的变动，如果有变动则再进行一次。知道最后两次完全一致，脏检查每个周期最多递归10遍。</p>
+</blockquote>
+<h4 id="图片验证码防止被刷接口"><a href="#图片验证码防止被刷接口" class="headerlink" title="图片验证码防止被刷接口"></a>图片验证码防止被刷接口</h4><blockquote>
+<p>之前做正则判断只要不是4个数字就会发起请求。现在做处理：不是四个数字的不发起请求来验证是否正确，四个数字才发起</p>
+</blockquote>
+<h4 id="图片验证码如何刷新"><a href="#图片验证码如何刷新" class="headerlink" title="图片验证码如何刷新"></a>图片验证码如何刷新</h4><blockquote>
+<p>json？v=time     每次验证码不通过，更新时间即可，angular会更具双向绑定来再次检测不同，然后发起请求。</p>
+</blockquote>
+<h4 id="给鑫谷做一个分包"><a href="#给鑫谷做一个分包" class="headerlink" title="给鑫谷做一个分包"></a>给鑫谷做一个分包</h4><blockquote>
+<p>根据#/index/agentCode  的agentCode来区分代理包，如果只是#/index则为YZTZ。之后如果有代理包，只要把agentCode改掉就好</p>
+</blockquote>
+<h4 id="angular如何设置cookie"><a href="#angular如何设置cookie" class="headerlink" title="angular如何设置cookie"></a>angular如何设置cookie</h4><blockquote>
+<p>angular有两种设置cookie的方式：$cookies和$cookieStore，设置方式：$cookies.put(name , value), 取值：get(),删除：remove()；<br>  差别：$cookies对name设置字符串属性的值，$cookieStore能对name设置对象，字符串，数组形势的值。<br>  $cookies可以对cookie设置过期时间，另一个不可以  具体资料链接：<a href="http://www.cnblogs.com/yangmin01/p/5973883.html" target="_blank" rel="noopener">http://www.cnblogs.com/yangmin01/p/5973883.html</a><br>  var expireDate = new Date();<br>  expireDate.setDate(expireDate.getDate() + 1);<br>  $cookies.put(“userName”,“yangmin”,{‘expires’: expireDate});//“userName”一天后过期</p>
+</blockquote>
 
       
     </div>
@@ -496,7 +521,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#指令模板：template，回调函数：link-在link中可执行请求，请求的服务写在最外层，看图"><span class="nav-number">1.</span> <span class="nav-text">指令模板：template，回调函数：link.在link中可执行请求，请求的服务写在最外层，看图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#angular自带的9种过滤器"><span class="nav-number">2.</span> <span class="nav-text">angular自带的9种过滤器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ng-class"><span class="nav-number">3.</span> <span class="nav-text">ng-class</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ng-bind"><span class="nav-number">4.</span> <span class="nav-text">ng-bind</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#goURL问题"><span class="nav-number">5.</span> <span class="nav-text">goURL问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ng-repeat遍历如何在子列表中展示数据"><span class="nav-number">6.</span> <span class="nav-text">ng-repeat遍历如何在子列表中展示数据</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#指令模板：template，回调函数：link-在link中可执行请求，请求的服务写在最外层，看图"><span class="nav-number">1.</span> <span class="nav-text">指令模板：template，回调函数：link.在link中可执行请求，请求的服务写在最外层，看图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#angular自带的9种过滤器"><span class="nav-number">2.</span> <span class="nav-text">angular自带的9种过滤器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ng-class"><span class="nav-number">3.</span> <span class="nav-text">ng-class</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ng-bind"><span class="nav-number">4.</span> <span class="nav-text">ng-bind</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#goURL问题"><span class="nav-number">5.</span> <span class="nav-text">goURL问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ng-repeat遍历如何在子列表中展示数据"><span class="nav-number">6.</span> <span class="nav-text">ng-repeat遍历如何在子列表中展示数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#原生js导致操作不受-scope控制"><span class="nav-number">7.</span> <span class="nav-text">原生js导致操作不受$scope控制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#T-1买断多个弹窗，当提醒弹窗到买断信息弹窗出现一闪"><span class="nav-number">8.</span> <span class="nav-text">T+1买断多个弹窗，当提醒弹窗到买断信息弹窗出现一闪</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#watch"><span class="nav-number">9.</span> <span class="nav-text">$watch</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#digest"><span class="nav-number">10.</span> <span class="nav-text">$digest</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#angualr脏检查"><span class="nav-number">11.</span> <span class="nav-text">angualr脏检查</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#图片验证码防止被刷接口"><span class="nav-number">12.</span> <span class="nav-text">图片验证码防止被刷接口</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#图片验证码如何刷新"><span class="nav-number">13.</span> <span class="nav-text">图片验证码如何刷新</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#给鑫谷做一个分包"><span class="nav-number">14.</span> <span class="nav-text">给鑫谷做一个分包</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#angular如何设置cookie"><span class="nav-number">15.</span> <span class="nav-text">angular如何设置cookie</span></a></li></ol></div>
             
           </div>
         </section>
