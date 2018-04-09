@@ -84,17 +84,17 @@
 
 
 
-<meta name="description" content="个人的Vue项目">
+<meta name="description" content="JS图片上传">
 <meta property="og:type" content="article">
-<meta property="og:title" content="点餐系统Vue-pos项目">
-<meta property="og:url" content="http://yoursite.com/2018/03/23/点餐系统Vue-pos项目/index.html">
+<meta property="og:title" content="JS预览本地图片的方法">
+<meta property="og:url" content="http://yoursite.com/2018/04/09/JS预览本地图片的方法/index.html">
 <meta property="og:site_name" content="Stone_Rivers&#39;s Blog">
-<meta property="og:description" content="个人的Vue项目">
+<meta property="og:description" content="JS图片上传">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-23T05:49:32.860Z">
+<meta property="og:updated_time" content="2018-04-09T11:40:09.020Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="点餐系统Vue-pos项目">
-<meta name="twitter:description" content="个人的Vue项目">
+<meta name="twitter:title" content="JS预览本地图片的方法">
+<meta name="twitter:description" content="JS图片上传">
 
 
 
@@ -115,9 +115,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/03/23/点餐系统Vue-pos项目/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/04/09/JS预览本地图片的方法/"/>
 
-  <title> 点餐系统Vue-pos项目 | Stone_Rivers's Blog </title>
+  <title> JS预览本地图片的方法 | Stone_Rivers's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -247,7 +247,7 @@
             
             
               
-                点餐系统Vue-pos项目
+                JS预览本地图片的方法
               
             
           </h1>
@@ -259,8 +259,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2018-03-23T13:26:07+08:00" content="2018-03-23">
-              2018-03-23
+            <time itemprop="dateCreated" datetime="2018-04-09T19:36:19+08:00" content="2018-04-09">
+              2018-04-09
             </time>
           </span>
 
@@ -270,8 +270,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2018/03/23/点餐系统Vue-pos项目/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/03/23/点餐系统Vue-pos项目/" itemprop="commentsCount"></span>
+                <a href="/2018/04/09/JS预览本地图片的方法/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/04/09/JS预览本地图片的方法/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -294,39 +294,12 @@
       
 
       
-        <h2 id="自己做个小项目练练手"><a href="#自己做个小项目练练手" class="headerlink" title="自己做个小项目练练手"></a>自己做个小项目练练手</h2><p><a href="https://github.com/wuhencut/vue-pos" target="_blank" rel="noopener">源码</a><br>这个小项目的搭建可系统的回顾与加深vue项目搭建所需要的知识点。麻雀虽小五脏俱全</p>
-<h3 id="这个项目用到的技术栈"><a href="#这个项目用到的技术栈" class="headerlink" title="这个项目用到的技术栈"></a>这个项目用到的技术栈</h3><ul>
-<li>Vue</li>
-<li>vue-router</li>
-<li>vue-cli</li>
-<li>axios </li>
-<li>ElementUI</li>
-</ul>
-<h3 id="学到的知识"><a href="#学到的知识" class="headerlink" title="学到的知识"></a>学到的知识</h3><ul>
-<li>el-row 一行</li>
-<li>el-col一列，可类似于bootstrap设置占据的宽度，:span=”7”;</li>
-<li>了解el-table如何遍历，如何绑定遍历数据，如何传入当前对象对参数</li>
-<li>el-table-column的templat必须加 slot-scope = “scope”不然不显示内部， 当前对象作为参数： scope.row</li>
-<li>el-button el的按钮，有自己的样式，success,warning,danger等等</li>
-<li>el-tabs的使用，她其实就是一个分页的标签，有点类似ul</li>
-<li>el-tab-pane 单页，类似于li</li>
-</ul>
-<h3 id="axios"><a href="#axios" class="headerlink" title="axios"></a>axios</h3><h4 id="引入axios"><a href="#引入axios" class="headerlink" title="引入axios"></a>引入axios</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install axios --save</span><br></pre></td></tr></table></figure>
-<p>在组件中引入axios<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import axios from <span class="string">'axios'</span></span><br></pre></td></tr></table></figure></p>
-<p>axios的then方法中如果使用function，this为undefined，不知道为啥，用箭头函数，this指向外部vue实例相当于用function函数在外面声明了let t = this;</p>
-<h3 id="数组filter"><a href="#数组filter" class="headerlink" title="数组filter"></a>数组filter</h3><blockquote>
-<p>可根据条件删选元素成为新的数组<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let arr = this.tableData.filter(o =&gt; o.goodsId == goods.goodsId);</span><br><span class="line">arr[<span class="number">0</span>].count++;</span><br><span class="line"></span><br><span class="line">this.tableData = this.tableData.filter(o =&gt; o.goodsId != goods.goodsId) /<span class="regexp">/ 可看Pos组件代码</span></span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<h3 id="Element组件的-message方法"><a href="#Element组件的-message方法" class="headerlink" title="Element组件的$message方法"></a>Element组件的$message方法</h3><blockquote>
-<p>可直接在方法中使用<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">this.$meaasge.success(<span class="string">'.....'</span>);</span><br><span class="line">this.$message.error(<span class="string">'....'</span>);</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<p>也可以这样<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">this.$message(&#123;</span><br><span class="line"><span class="symbol">message:</span> <span class="string">'结账成功，感谢你的购买！'</span>,</span><br><span class="line"><span class="symbol">type:</span> <span class="string">'success'</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
-<h3 id="css-peek问题"><a href="#css-peek问题" class="headerlink" title="css peek问题"></a>css peek问题</h3><blockquote>
-<p>在点击TDTradeBuy页面的rote-select样式的时候，只跳转到merge.min.css文件，解决： 点击右上角“为此文件禁用换行”，就会出现文件给你选择</p>
-</blockquote>
-<h3 id="vue项目打包上线"><a href="#vue项目打包上线" class="headerlink" title="vue项目打包上线"></a>vue项目打包上线</h3><blockquote>
-<p>config/index.js的assetsPublicPath公用路径的/改为./相对路径<br>运行 npm run build 会生成一个build文件。可直接将此文将放到服务器使用</p>
-</blockquote>
+        <p>今天看到群里有人在问图片上传这个问题，自己一直有想了解，刚好群里有人给出了解决方法，我这里做一遍来加深印象</p>
+<p>demo</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=<span class="string">"en"</span>&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=<span class="string">"UTF-8"</span>&gt;</span><br><span class="line">    &lt;title&gt;UploadFile&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">   &lt;div&gt;</span><br><span class="line">        &lt;img src=<span class="string">""</span> id=<span class="string">"img"</span> style=<span class="string">"width:200px;height:300px;"</span> /&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;input <span class="built_in">type</span>=<span class="string">"file"</span> id=<span class="string">"file"</span> /&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br><span class="line">&lt;script src=<span class="string">"https://cdn.bootcss.com/jquery/1.12.1/jquery.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;script <span class="built_in">type</span>=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">    window.onload = <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">        var fileTag = document.getElementById(<span class="string">'file'</span>);</span><br><span class="line">        fileTag.onchange = <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">            var file = fileTag.files[0];</span><br><span class="line">            var fileReader = new FileReader();</span><br><span class="line">            fileReader.onloadend = <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">                <span class="keyword">if</span> (fileReader.readyState == fileReader.DONE) &#123;</span><br><span class="line">                    console.log(fileReader);</span><br><span class="line">                    console.log(file)</span><br><span class="line">                    document.getElementById(<span class="string">'img'</span>).setAttribute(<span class="string">'src'</span>, fileReader.result);</span><br><span class="line">                    $.post(<span class="string">"http://localhost/index.php"</span>,&#123;img:fileReader.result&#125;,<span class="keyword">function</span>(result)&#123;</span><br><span class="line">                        $(<span class="string">"span"</span>).html(result);</span><br><span class="line">                    &#125;);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;;</span><br><span class="line">            fileReader.readAsDataURL(file);</span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>这里用的是fileReader，返回的fileReader.result是该文件的二进制流</p>
+<p>发送给后台： post， 后台： base64_decode可以上传到服务器，不过好像我看群里有人说，微信小程序不可以用这个方法，之后再说</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">header(<span class="string">'Access-Control-Allow-Origin:*'</span>);</span><br><span class="line">header(<span class="string">'Access-Control-Allow-Methods:GET,POST,PATCH,PUT,OPTIONS'</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="variable">$img</span> = isset(<span class="variable">$_POST</span>[<span class="string">'img'</span>])? <span class="variable">$_POST</span>[<span class="string">'img'</span>] : <span class="string">''</span>;  </span><br><span class="line"></span><br><span class="line">// 获取图片  </span><br><span class="line">list(<span class="variable">$type</span>, <span class="variable">$data</span>) = explode(<span class="string">','</span>, <span class="variable">$img</span>);  </span><br><span class="line"></span><br><span class="line">// 判断类型  </span><br><span class="line"><span class="keyword">if</span>(strstr(<span class="variable">$type</span>,<span class="string">'image/jpeg'</span>)!=<span class="string">''</span>)&#123;  </span><br><span class="line">  <span class="variable">$ext</span> = <span class="string">'.jpg'</span>;  </span><br><span class="line">&#125;elseif(strstr(<span class="variable">$type</span>,<span class="string">'image/gif'</span>)!=<span class="string">''</span>)&#123;  </span><br><span class="line">  <span class="variable">$ext</span> = <span class="string">'.gif'</span>;  </span><br><span class="line">&#125;elseif(strstr(<span class="variable">$type</span>,<span class="string">'image/png'</span>)!=<span class="string">''</span>)&#123;  </span><br><span class="line">  <span class="variable">$ext</span> = <span class="string">'.png'</span>;  </span><br><span class="line">&#125;  </span><br><span class="line"></span><br><span class="line">// 生成的文件名  </span><br><span class="line"><span class="variable">$photo</span> = time().<span class="variable">$ext</span>;  </span><br><span class="line"></span><br><span class="line">// 生成文件  </span><br><span class="line">file_put_contents(<span class="variable">$photo</span>, base64_decode(<span class="variable">$data</span>), <span class="literal">true</span>);  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// 返回  </span><br><span class="line"><span class="variable">$ret</span> = array(<span class="string">'img'</span>=&gt;<span class="variable">$photo</span>,<span class="string">'code'</span>=&gt;1);  </span><br><span class="line"><span class="built_in">echo</span> json_encode(<span class="variable">$ret</span>);</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -352,17 +325,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/03/19/VS-Code-WebStorm编辑器相关问题/" rel="next" title="VS Code & WebStorm编辑器相关问题">
-                <i class="fa fa-chevron-left"></i> VS Code & WebStorm编辑器相关问题
+              <a href="/2018/03/23/点餐系统Vue-pos项目/" rel="next" title="点餐系统Vue-pos项目">
+                <i class="fa fa-chevron-left"></i> 点餐系统Vue-pos项目
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/04/09/JS预览本地图片的方法/" rel="prev" title="JS预览本地图片的方法">
-                JS预览本地图片的方法 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -377,10 +346,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2018/03/23/点餐系统Vue-pos项目/"
-     data-title="点餐系统Vue-pos项目"
+        <div class="ds-share flat" data-thread-key="2018/04/09/JS预览本地图片的方法/"
+     data-title="JS预览本地图片的方法"
      data-content=""
-     data-url="http://yoursite.com/2018/03/23/点餐系统Vue-pos项目/">
+     data-url="http://yoursite.com/2018/04/09/JS预览本地图片的方法/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -407,8 +376,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2018/03/23/点餐系统Vue-pos项目/"
-           data-title="点餐系统Vue-pos项目" data-url="http://yoursite.com/2018/03/23/点餐系统Vue-pos项目/">
+      <div class="ds-thread" data-thread-key="2018/04/09/JS预览本地图片的方法/"
+           data-title="JS预览本地图片的方法" data-url="http://yoursite.com/2018/04/09/JS预览本地图片的方法/">
       </div>
     
   </div>
@@ -499,7 +468,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#自己做个小项目练练手"><span class="nav-number">1.</span> <span class="nav-text">自己做个小项目练练手</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#这个项目用到的技术栈"><span class="nav-number">1.1.</span> <span class="nav-text">这个项目用到的技术栈</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#学到的知识"><span class="nav-number">1.2.</span> <span class="nav-text">学到的知识</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#axios"><span class="nav-number">1.3.</span> <span class="nav-text">axios</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#引入axios"><span class="nav-number">1.3.1.</span> <span class="nav-text">引入axios</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数组filter"><span class="nav-number">1.4.</span> <span class="nav-text">数组filter</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Element组件的-message方法"><span class="nav-number">1.5.</span> <span class="nav-text">Element组件的$message方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css-peek问题"><span class="nav-number">1.6.</span> <span class="nav-text">css peek问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vue项目打包上线"><span class="nav-number">1.7.</span> <span class="nav-text">vue项目打包上线</span></a></li></ol></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
         </section>
